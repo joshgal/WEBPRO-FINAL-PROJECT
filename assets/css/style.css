@@ -1,0 +1,102 @@
+    #navbar{
+  		padding-top:0px;
+  		padding-bottom:0px;
+  		box-shadow: 0 5px 30px 0 rgba(0,0,0,0.10);
+  	}
+
+    #navMainMenu{
+      padding-top:0px;
+      padding-bottom:0px;
+      width:100%;
+    }
+
+  	#navbar ul li a:hover{
+  		border-bottom: 2px solid #ec2c59; 
+      color: black;
+  	}
+  	#navbar ul li a{
+	  display: block;
+	  color: #a5a5a5;
+	  text-align: center;
+	  padding: 25px 25px;
+	  text-decoration: none;
+	  font-size: 17px;
+	  border-bottom: 2px solid transparent;
+  	}
+
+  	#judul{
+  	font-style: normal;
+  	line-height: 1.2;
+  	font-family: 'Rubik', sans-serif;
+ 		font-size: 4.25rem;
+  	}
+
+    .footer{
+      background-color: #4a4a4a;
+      color: white;
+    }
+
+    #ft-item{
+      text-decoration: none;
+      color: #bcbcbc;
+    }
+
+    #ft-item:hover{
+      color: white;
+    }
+
+    #container-bg{
+      height: 445px;
+      padding: 110px;
+      width: 100%;
+      background-color: #db971a;
+      color: white;
+    }
+    #item-right{
+      padding-left: 620px;
+    }
+
+    #containerMenu{
+      padding: 15px;
+    }
+
+    #ktg-menu{
+      padding-bottom:20px;
+      cursor: pointer;
+      border-bottom:2px solid grey;
+    }
+
+    .active, #ktg-menu:hover{
+      border-bottom: 2px solid #ec2c59; 
+      color: #ec2c59; 
+    }
+     /* Style the tab */
+.tab {
+  border: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  border-bottom: 2px solid grey;
+}
+#tabspace{
+  padding: 20px;
+}
+
+/* Change background color of buttons on hover */
+.tablinks:hover {
+  color: #ec2c59;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  border-bottom: 2px solid #ec2c59;
+  color: #ec2c59;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+} 
