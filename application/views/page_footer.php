@@ -1,4 +1,5 @@
-  <div class="footer">
+  </div>
+  <div id="footer">
       <div class="container">
           <div class="row">
               <ul class="nav d-flex justify-content-left mr-auto ">
@@ -12,5 +13,6 @@
           </div>
       </div>
   </div>
+
 </body>
 </html>

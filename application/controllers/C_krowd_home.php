@@ -23,4 +23,9 @@ class C_krowd_home extends CI_Controller {
 	{
 		$this->load->view('main_menu');
 	}
+
+	public function about()
+	{
+		$this->load->view('about');
+	}
 }

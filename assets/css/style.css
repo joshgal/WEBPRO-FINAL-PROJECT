@@ -26,12 +26,16 @@
 
   	#judul{
   	font-style: normal;
-  	line-height: 1.2;
+  	line-height: 1;
   	font-family: 'Rubik', sans-serif;
- 		font-size: 4.25rem;
+ 		font-size: 4rem;
+    width: 60%; 
+    font-weight: bold; 
+    color: white;
+    margin: auto auto 0.1rem;
   	}
 
-    .footer{
+    #footer{
       background-color: #4a4a4a;
       color: white;
     }
@@ -71,32 +75,41 @@
       color: #ec2c59; 
     }
      /* Style the tab */
-.tab {
-  border: 0px;
-  width: 100%;
-  text-align: center;
-  background-color: white;
-  border-bottom: 2px solid grey;
-}
-#tabspace{
-  padding: 20px;
-}
+    .tab {
+      border: 0px;
+      width: 100%;
+      text-align: center;
+      background-color: white;
+      border-bottom: 2px solid grey;
+    }
+    #tabspace{
+      padding: 20px;
+    }
 
-/* Change background color of buttons on hover */
-.tablinks:hover {
-  color: #ec2c59;
-}
+    /* Change background color of buttons on hover */
+    .tablinks:hover {
+      color: #ec2c59;
+    }
 
-/* Create an active/current tablink class */
-.tab button.active {
-  border-bottom: 2px solid #ec2c59;
-  color: #ec2c59;
-}
+    /* Create an active/current tablink class */
+    .tab button.active {
+      border-bottom: 2px solid #ec2c59;
+      color: #ec2c59;
+    }
 
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-} 
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+
+  #container_menu {
+    position: relative; 
+    top: -90px; 
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%; 
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 7px 13px; 
+    padding: 40px; 
+    min-height: 620px;
+  }
