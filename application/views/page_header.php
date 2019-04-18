@@ -173,7 +173,7 @@
               <a href="<?= base_url('c_krowd_home/about')?>" class="item_link">About</a>
             </div>
             <div class="menu_item RC-MenuItem">
-              <a href="/login" class="item_link">Initiate +</a>
+              <a href="<?= base_url('initiate')?>" class="item_link">Initiate +</a>
             </div>
             <div class="button_group">
               <button class="nav_button_login">Login</button>
