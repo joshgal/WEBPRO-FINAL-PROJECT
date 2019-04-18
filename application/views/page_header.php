@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="<?= base_url('assets/css/main.11b91c4a.css')?>"/>
 
 	<script src="<?= base_url('assets/js/bootstrap.min.js')?>"></script>
+  <script src="<?= base_url('assets/js/jquery.min.js')?>"></script>
+
+
 	<!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
@@ -41,25 +44,7 @@
 
 </head>
 <body>
-	<!-- <nav class="navbar navbar-expand-sm navbar-light" id="navbar">
-  	<a class="navbar-brand mr-auto" href="<?= base_url()?>" style="padding-left: 73px;">
-  	  <img src="<?= base_url('assets/img/logo.png')?>" width="190" height="70" class="d-inline-block align-top" alt="logo">
-  	</a>  
-    <div class="navbar-collapse collapse justify-content-between">
-      <ul class="navbar-nav mr-auto">
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('c_krowd_home/about')?>">About</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Initiate +</a>
-        </li>
-      </ul>
-    </div>
-	</nav> -->
-
-  <style>
+<style>
   .bungkus{
     min-height: 100vh;
     background: rgb(242, 245, 247) none repeat scroll 0% 0%;
@@ -169,10 +154,10 @@
             </button>
           </div>
           <div class="is-hidden-tablet navbar-menu">
-            <div class="menu_item RC-MenuItem">
+            <div class="menu_item">
               <a href="<?= base_url('c_krowd_home/about')?>" class="item_link">About</a>
             </div>
-            <div class="menu_item RC-MenuItem">
+            <div class="menu_item">
               <a href="/login" class="item_link">Initiate +</a>
             </div>
             <div class="button_group">
