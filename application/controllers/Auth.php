@@ -10,23 +10,23 @@ class Auth extends CI_Controller {
     }
     public function index(){
         $this->load->view('page_header');
-        $this->load->view('welcome_message');
+        $this->load->view('Auth/login');
         $this->load->view('page_footer');
-       
+
     }
     public function login(){
         $this->form_validation->set_rules('username','Username','required|trim');
         $this->form_validation->set_rules('password','Password','required|trim');
-        if($this->form_validation->run() != TRUE){ 
+        if($this->form_validation->run() != TRUE){
             $this->load->view('page_header');
             $this->load->view('auth/Login');
             $this->load->view('page_footer');
         }else{
             $this->Auth_model->login();
         }
-    
+
     }
-  
+
     public function registrasi(){
         $this->form_validation->set_rules('username','Username','required|trim');
         $this->form_validation->set_rules('email','Email','required|trim|valid_email');
@@ -38,12 +38,12 @@ class Auth extends CI_Controller {
             $this->load->view('auth/registrasi');
             $this->load->view('page_footer');
         }else{
-		
+
              $this->Auth_model->registrasi();
-               redirect('auth/Login');		
+               redirect('auth/Login');
             }
 
-        
+
     }
-   
+
 }
