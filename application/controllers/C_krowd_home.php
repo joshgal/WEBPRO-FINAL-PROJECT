@@ -28,4 +28,14 @@ class C_krowd_home extends CI_Controller {
 	{
 		$this->load->view('about');
 	}
+	public function privacy()
+	{
+		$this->load->view('privacy');
+	}
+	public function faq(){
+		$this->load->view('faq');
+	}
+	public function term(){
+		$this->load->view('term');
+	}
 }

@@ -2,17 +2,20 @@
 <html>
 <head>
 	<title>Krowd</title>
-	
+
   <!-- Styling -->
   <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css')?>"/>
   <link rel="stylesheet" href="<?= base_url('assets/css/style.css')?>"/>
   <link rel="stylesheet" href="<?= base_url('assets/css/main.11b91c4a.css')?>"/>
 
 	<script src="<?= base_url('assets/js/bootstrap.min.js')?>"></script>
+  <script src="<?= base_url('assets/js/jquery.min.js')?>"></script>
+
+
 	<!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
-  
+
   <!-- Favicon -->
   <link rel="icon" href="<?= base_url('assets/img/favicon.png')?>" sizes="16x16" type="image/png">
 
@@ -36,30 +39,12 @@
       // Show the current tab, and add an "active" class to the button that opened the tab
       document.getElementById(kategori).style.display = "block";
       evt.currentTarget.className += " active";
-    } 
+    }
   </script>
 
 </head>
 <body>
-	<!-- <nav class="navbar navbar-expand-sm navbar-light" id="navbar">
-  	<a class="navbar-brand mr-auto" href="<?= base_url()?>" style="padding-left: 73px;">
-  	  <img src="<?= base_url('assets/img/logo.png')?>" width="190" height="70" class="d-inline-block align-top" alt="logo">
-  	</a>  
-    <div class="navbar-collapse collapse justify-content-between">
-      <ul class="navbar-nav mr-auto">
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('c_krowd_home/about')?>">About</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Initiate +</a>
-        </li>
-      </ul>
-    </div>
-	</nav> -->
-
-  <style>
+<style>
   .bungkus{
     min-height: 100vh;
     background: rgb(242, 245, 247) none repeat scroll 0% 0%;
@@ -169,11 +154,11 @@
             </button>
           </div>
           <div class="is-hidden-tablet navbar-menu">
-            <div class="menu_item RC-MenuItem">
+            <div class="menu_item">
               <a href="<?= base_url('c_krowd_home/about')?>" class="item_link">About</a>
             </div>
-            <div class="menu_item RC-MenuItem">
-              <a href="<?= base_url('initiate')?>" class="item_link">Initiate +</a>
+            <div class="menu_item">
+              <a href="/login" class="item_link">Initiate +</a>
             </div>
             <div class="button_group">
               <button class="nav_button_login">Login</button>
@@ -205,7 +190,7 @@
       <div class="Loading__loading___1m_fZ">
         <div class="Loading__bar___21yOt" style="background: rgb(238, 48, 89); width: 0%; display: none;">
           <div class="Loading__peg___3Y_28">
-            
+
           </div>
         </div>
       </div>
