@@ -161,7 +161,7 @@
               <a href="/login" class="item_link">Initiate +</a>
             </div>
             <div class="button_group">
-              <button class="nav_button_login">Login</button>
+								<button onclick="<?= base_url('c_krowd_login/index')?>" class="nav_button_login">Login</button>
             </div>
             <div class="button_group">
               <button class="nav_button_regis">Register</button>
@@ -177,7 +177,7 @@
               <a href="/login" class="item_link">Initiate +</a>
             </div>
             <div class="button_group">
-              <button class="nav_button_login">Login</button>
+              	<button onclick="<?=base_url('c_krowd_login/index')?>" class="nav_button_login" >Login</button>
             </div>
             <div class="button_group">
               <button class="nav_button_regis">Register</button>

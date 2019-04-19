@@ -1,6 +1,6 @@
 <?php $this->load->view('page_header')?>
 <style>
-    
+
 .card-container.card {
     max-width: 500px;
     padding: 100px ;
@@ -34,12 +34,12 @@
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-.message    {    
-    margin-top: 0px; 
-    margin-bottom: 40px; 
-    text-align: center; 
-    font-family: heading-bold; 
-    font-weight: bold; 
+.message    {
+    margin-top: 0px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: heading-bold;
+    font-weight: bold;
     font-size: 36px;
     background-color:#ffffff;
 }
@@ -117,14 +117,18 @@
             <h1 class="message">Let's get started!</h1>
             <form class="form-initiate">
                 <span id="reauth-email" class="reauth-email"></span>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <button class="btn btn-lg btn-primary btn-block btn-next" type="submit">Sign in</button>
+                <label>Project Title</label>
+                <input type="text" id="inputEmail" class="form-control" placeholder="Project Title" required autofocus>
+                <label>Choose the category of this project</label>
+                <select class="form-control selectpicker" placeholder="Select Category"style="margin-bottom: 16px;">
+                  <option hidden>Select Category</option>
+                  <option>Music</option>
+                  <option>Art</option>
+                  <option>Design</option>
+                  <option>Social</option>
+                </select>
+                <button class="btn btn-lg btn-block btn-next text-white" type="submit" style="background: rgb(238, 48, 89);">Next</button>
             </form><!-- /form -->
-            <a href="#" class="forgot-password">
-                Forgot the password?
-            </a>
         </div><!-- /card-container -->
     </div><!-- /container -->
 <?php $this->load->view('page_footer')?>
-

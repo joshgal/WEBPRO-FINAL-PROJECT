@@ -51,5 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'c_krowd_home';
 $route['initiate'] = 'c_krowd_initiate';
+$route['profile'] = 'C_profile';
+$route['login'] = 'c_krowd_login';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
