@@ -161,26 +161,26 @@
               <a href="/login" class="item_link">Initiate +</a>
             </div>
             <div class="button_group">
-								<button onclick="<?= base_url('c_krowd_login/index')?>" class="nav_button_login">Login</button>
+								<a class="btn nav_button_login" href="<?= site_url('Auth/login')?>" class="nav_button_login">Login</a>
             </div>
             <div class="button_group">
-              <button class="nav_button_regis">Register</button>
+              <a class="btn nav_button_regis" href="<?= site_url('Auth/registrasi')?>">Register</a>
             </div>
           </div>
         </div>
         <div class="column is-hidden-mobile is-6-tablet is-inline-block is-paddingless">
           <div class="css-c9d96w">
             <div class="menu_item">
-              <a href="<?= base_url('c_krowd_home/about')?>" class="item_link">About</a>
+              <a href="<?= site_url('c_krowd_home/about')?>" class="item_link">About</a>
             </div>
             <div class="menu_item">
               <a href="/login" class="item_link">Initiate +</a>
             </div>
             <div class="button_group">
-              	<button onclick="<?=base_url('c_krowd_login/index')?>" class="nav_button_login" >Login</button>
+              	<a class="btn nav_button_login" href="<?=site_url('Auth/login')?>">Login</a>
             </div>
             <div class="button_group">
-              <button class="nav_button_regis">Register</button>
+              <a class="btn nav_button_regis" href="<?= site_url('Auth/registrasi')?>">Register</a>
             </div>
           </div>
         </div>

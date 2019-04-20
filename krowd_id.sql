@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Apr 2019 pada 13.58
+-- Waktu pembuatan: 20 Apr 2019 pada 11.19
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.2.12
 
@@ -82,6 +82,13 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data untuk tabel `user`
+--
+
+INSERT INTO `user` (`id_user`, `username`, `email`, `password`, `short_bio`, `experience`, `portfolio`) VALUES
+(5, 'Revaldi', 'revaldigilangazhari@yahoo.co.id', '$2y$10$S0p5HIKICMk9sMAxwxmZ3eEZNmlIgeckm6b7h/GWPs3p6Fpo95Ewm', '', '', '');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -136,6 +143,12 @@ ALTER TABLE `reward`
   MODIFY `id_reward` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT untuk tabel `user`
+--
+ALTER TABLE `user`
+  MODIFY `id_user` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
@@ -143,15 +156,15 @@ ALTER TABLE `reward`
 -- Ketidakleluasaan untuk tabel `queue`
 --
 ALTER TABLE `queue`
-  ADD CONSTRAINT `queue_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`),
-  ADD CONSTRAINT `queue_ibfk_2` FOREIGN KEY (`id_porject`) REFERENCES `project` (`id_project`);
+  ADD CONSTRAINT `queue_ibfk_2` FOREIGN KEY (`id_porject`) REFERENCES `project` (`id_project`),
+  ADD CONSTRAINT `queue_ibfk_3` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`);
 
 --
 -- Ketidakleluasaan untuk tabel `reward`
 --
 ALTER TABLE `reward`
-  ADD CONSTRAINT `reward_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`),
-  ADD CONSTRAINT `reward_ibfk_2` FOREIGN KEY (`id_project`) REFERENCES `project` (`id_project`);
+  ADD CONSTRAINT `reward_ibfk_2` FOREIGN KEY (`id_project`) REFERENCES `project` (`id_project`),
+  ADD CONSTRAINT `reward_ibfk_3` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

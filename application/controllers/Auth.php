@@ -19,7 +19,7 @@ class Auth extends CI_Controller {
         $this->form_validation->set_rules('password','Password','required|trim');
         if($this->form_validation->run() != TRUE){
             $this->load->view('page_header');
-            $this->load->view('auth/Login');
+            $this->load->view('auth/login');
             $this->load->view('page_footer');
         }else{
             $this->Auth_model->login();
@@ -38,9 +38,8 @@ class Auth extends CI_Controller {
             $this->load->view('auth/registrasi');
             $this->load->view('page_footer');
         }else{
-
              $this->Auth_model->registrasi();
-               redirect('auth/Login');
+               redirect('auth/login');
             }
 
 
