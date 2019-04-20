@@ -29,7 +29,7 @@ class Auth extends CI_Controller {
 
     public function registrasi(){
         $this->form_validation->set_rules('username','Username','required|trim');
-        $this->form_validation->set_rules('email','Email','required|trim|valid_email');
+        $this->form_validation->set_rules('email','Email','required|trim|valid_email|is_unique[user.email]');
         $this->form_validation->set_rules('password','Password','required|trim|min_length[3]|matches[re_password]');
         $this->form_validation->set_rules('re_password','Re_password','required|trim|min_length[3]|matches[password]');
 
