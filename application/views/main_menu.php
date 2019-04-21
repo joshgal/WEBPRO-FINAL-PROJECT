@@ -107,7 +107,170 @@
       padding-left: 4px;
     }
     </style>
+    
+    <div class="card-deck">
     <div id="Popular" class="tabcontent">
+    <?php foreach($project as $p){ 
+      if (($p['popularity']=="yes")&&$p['admin_check']=="Accepted") {?>
+      <div class="columns is-multiline">
+          <div class="column is-6-tablet is-4-desktop is-3-widescreen">
+            <div class="RC-ProjectCard">
+              <div class="css-1ql4heq card--container">
+                <div class="card--header is-paddingless">
+                  <a href="#">
+                    <div class="card--img-cover">
+                      <img src="<?= base_url('assets/img/default-project.png')?>" style="width: 100%; height: 200px; object-fit: cover;" alt="card">
+                    </div>
+                  </a>
+                </div>
+                <div class="card--body">
+                  <div class="css-8os6if">
+                    <div class="css-1wiurnj">
+                      <a href="#">
+                        <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
+                        </h3>
+                      </a>
+                      <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);"><?= $p['kategori']?>
+                      </span>
+                      <p class="sc_auth">
+                        <span class="css-1uf8gs7">by</span>
+                        <span class="css-1qr1eue"><?= $p['username']?></span>
+                      </p>
+                      <div class="css-pczjz8"><?= $p['short_desc']?>
+                      </div>
+                    </div>
+                    <div>
+                      <progress class="progress is-danger is-12 is-small" value="<?= $p['joined_user']?>" max="<?= $p['max_user']?>" style="margin-bottom: 5px;"></progress>
+                      <div class="columns is-mobile" style="margin: 0px;">
+                        <div class="column is-6 is-size-7 is-inline-block is-paddingless">
+                          <span class="css-1uf8gs7"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
+                          <span class="css-bmw5fo">Collaborators</span>
+                        </div>
+                        <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
+                          <p class="time-left"><?= $p['days_left']?>
+                            <span class="css-fy2zpe">days left</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <?php }} ?>
+    </div>
+    
+    <div id="Music" class="tabcontent">
+      <?php foreach($project as $p){ 
+        if (($p['kategori']=="music")&&$p['admin_check']=="Accepted") {?>
+        <div class="columns is-multiline">
+          <div class="column is-6-tablet is-4-desktop is-3-widescreen">
+            <div class="RC-ProjectCard">
+              <div class="css-1ql4heq card--container">
+                <div class="card--header is-paddingless">
+                  <a href="#">
+                    <div class="card--img-cover">
+                      <img src="<?= base_url('assets/img/default-project.png')?>" style="width: 100%; height: 200px; object-fit: cover;" alt="card">
+                    </div>
+                  </a>
+                </div>
+                <div class="card--body">
+                  <div class="css-8os6if">
+                    <div class="css-1wiurnj">
+                      <a href="#">
+                        <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
+                        </h3>
+                      </a>
+                      <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);"><?= $p['kategori']?>
+                      </span>
+                      <p class="sc_auth">
+                        <span class="css-1uf8gs7">by</span>
+                        <span class="css-1qr1eue"><?= $p['username']?></span>
+                      </p>
+                      <div class="css-pczjz8"><?= $p['short_desc']?>
+                      </div>
+                    </div>
+                    <div>
+                      <progress class="progress is-danger is-12 is-small" value="<?= $p['joined_user']?>" max="<?= $p['max_user']?>" style="margin-bottom: 5px;"></progress>
+                      <div class="columns is-mobile" style="margin: 0px;">
+                        <div class="column is-6 is-size-7 is-inline-block is-paddingless">
+                          <span class="css-1uf8gs7"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
+                          <span class="css-bmw5fo">Collaborators</span>
+                        </div>
+                        <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
+                          <p class="time-left"><?= $p['days_left']?>
+                            <span class="css-fy2zpe">days left</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <?php }} ?>
+      </div>
+
+    <div id="Fashion" class="tabcontent">
+      <?php foreach($project as $p){ 
+        if (($p['kategori']=="fashion")&&$p['admin_check']=="Accepted") {?>
+        <div class="columns is-multiline">
+          <div class="column is-6-tablet is-4-desktop is-3-widescreen">
+            <div class="RC-ProjectCard">
+              <div class="css-1ql4heq card--container">
+                <div class="card--header is-paddingless">
+                  <a href="#">
+                    <div class="card--img-cover">
+                      <img src="<?= base_url('assets/img/default-project.png')?>" style="width: 100%; height: 200px; object-fit: cover;" alt="card">
+                    </div>
+                  </a>
+                </div>
+                <div class="card--body">
+                  <div class="css-8os6if">
+                    <div class="css-1wiurnj">
+                      <a href="#">
+                        <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
+                        </h3>
+                      </a>
+                      <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);"><?= $p['kategori']?>
+                      </span>
+                      <p class="sc_auth">
+                        <span class="css-1uf8gs7">by</span>
+                        <span class="css-1qr1eue"><?= $p['username']?></span>
+                      </p>
+                      <div class="css-pczjz8"><?= $p['short_desc']?>
+                      </div>
+                    </div>
+                    <div>
+                      <progress class="progress is-danger is-12 is-small" value="<?= $p['joined_user']?>" max="<?= $p['max_user']?>" style="margin-bottom: 5px;"></progress>
+                      <div class="columns is-mobile" style="margin: 0px;">
+                        <div class="column is-6 is-size-7 is-inline-block is-paddingless">
+                          <span class="css-1uf8gs7"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
+                          <span class="css-bmw5fo">Collaborators</span>
+                        </div>
+                        <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
+                          <p class="time-left"><?= $p['days_left']?>
+                            <span class="css-fy2zpe">days left</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <?php }} ?>
+    </div>
+
+    <div id="Tech" class="tabcontent">
+      <?php foreach($project as $p){ 
+      if (($p['popularity']=="yes")&&$p['admin_check']=="Accepted") {?>
       <div class="columns is-multiline">
         <div class="column is-6-tablet is-4-desktop is-3-widescreen">
           <div class="RC-ProjectCard">
@@ -123,27 +286,27 @@
                 <div class="css-8os6if">
                   <div class="css-1wiurnj">
                     <a href="#">
-                      <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;">Aplikasi E-commerce untuk Farmasi Besar
+                      <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                       </h3>
                     </a>
-                    <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);">Technology
+                    <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);"><?= $p['kategori']?>
                     </span>
                     <p class="sc_auth">
                       <span class="css-1uf8gs7">by</span>
-                      <span class="css-1qr1eue">Prillyandini_Nurul</span>
+                      <span class="css-1qr1eue"><?= $p['username']?></span>
                     </p>
-                    <div class="css-pczjz8">Kami membuat aplikasi yang menghubungkan penyedia stok obat-obatan maupun alat kesehatan dengan apotek-apotek hingga rumah sakit.
+                    <div class="css-pczjz8"><?= $p['short_desc']?>
                     </div>
                   </div>
                   <div>
-                    <progress class="progress is-danger is-12 is-small" value="3" max="10" style="margin-bottom: 5px;">30%</progress>
+                    <progress class="progress is-danger is-12 is-small" value="<?= $p['joined_user']?>" max="<?= $p['max_user']?>" style="margin-bottom: 5px;"></progress>
                     <div class="columns is-mobile" style="margin: 0px;">
                       <div class="column is-6 is-size-7 is-inline-block is-paddingless">
-                        <span class="css-1uf8gs7">3/10</span>
+                        <span class="css-1uf8gs7"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
                         <span class="css-bmw5fo">Collaborators</span>
                       </div>
                       <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
-                        <p class="time-left">256
+                        <p class="time-left"><?= $p['days_left']?>
                           <span class="css-fy2zpe">days left</span>
                         </p>
                       </div>
@@ -154,36 +317,52 @@
             </div>
           </div>
         </div>
-        <div class="column is-6-tablet is-4-desktop is-3-widescreen">
-          <div class="RC-ProjectCard">
-            <div class="css-1ql4heq card--container">
-              <div class="card--header is-paddingless">
-                <a href="./project/cecd0007-ac8a-48be-acb9-b7830bc5f7e3">
-                  <div class="card--img-cover">
-                    <img src="https://storage.googleapis.com/krowd-2017/SAMAN_UPI_PURWAKARTA_20180109_182704_-_Luhung_Kawuryaning_P-2018-01-10-025933.jpg" style="width: 100%; height: 200px; object-fit: cover;" alt="card">
-                  </div>
-                </a>
-              </div>
-              <div class="card--body">
-                <div class="css-8os6if card--content">
-                  <div class="css-1wiurnj card--content-top">
-                    <a href="./project/cecd0007-ac8a-48be-acb9-b7830bc5f7e3">
-                      <h3 class="title" style="font-family: heading; font-weight: bold; font-size: 24px; overflow-wrap: break-word;">Saman Entrepreneur</h3>
-                    </a><span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);">Art &amp; Culture</span>
-                    <p class="css-iu7k7s author"><span class="css-1uf8gs7">by</span><span class="css-1qr1eue">Luhung_Kawuryaning</span>
-                    </p>
-                    <div class="css-pczjz8">Almost no Saman dancers in Batam, I want to preserve the culture so that any event that there is entertainment or opening event is not only Melayu dance, but traditional dance outside Batam area.
+      </div>
+      <?php }} ?>
+    </div> 
+
+    <div id="Art" class="tabcontent">
+      <?php foreach($project as $p){ 
+        if (($p['kategori']=="art")&&$p['admin_check']=="Accepted") {?>
+        <div class="columns is-multiline">
+          <div class="column is-6-tablet is-4-desktop is-3-widescreen">
+            <div class="RC-ProjectCard">
+              <div class="css-1ql4heq card--container">
+                <div class="card--header is-paddingless">
+                  <a href="#">
+                    <div class="card--img-cover">
+                      <img src="<?= base_url('assets/img/default-project.png')?>" style="width: 100%; height: 200px; object-fit: cover;" alt="card">
                     </div>
-                  </div>
-                  <div>
-                    <progress class="progress is-danger is-12 is-small" value="0" max="100" style="margin-bottom: 5px;">0%</progress>
-                    <div class="columns is-mobile" style="margin: 0px;">
-                      <div class="column is-6 is-size-7 is-inline-block is-paddingless"><span class="css-1uf8gs7">0/8</span>
-                        <span class="css-bmw5fo">Collaborators</span>
+                  </a>
+                </div>
+                <div class="card--body">
+                  <div class="css-8os6if">
+                    <div class="css-1wiurnj">
+                      <a href="#">
+                        <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
+                        </h3>
+                      </a>
+                      <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);">Art and Culture
+                      </span>
+                      <p class="sc_auth">
+                        <span class="css-1uf8gs7">by</span>
+                        <span class="css-1qr1eue"><?= $p['username']?></span>
+                      </p>
+                      <div class="css-pczjz8"><?= $p['short_desc']?>
                       </div>
-                      <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
-                        <p class="time-left">112<span class="css-fy2zpe">days left</span>
-                        </p>
+                    </div>
+                    <div>
+                      <progress class="progress is-danger is-12 is-small" value="<?= $p['joined_user']?>" max="<?= $p['max_user']?>" style="margin-bottom: 5px;"></progress>
+                      <div class="columns is-mobile" style="margin: 0px;">
+                        <div class="column is-6 is-size-7 is-inline-block is-paddingless">
+                          <span class="css-1uf8gs7"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
+                          <span class="css-bmw5fo">Collaborators</span>
+                        </div>
+                        <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
+                          <p class="time-left"><?= $p['days_left']?>
+                            <span class="css-fy2zpe">days left</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -192,49 +371,226 @@
             </div>
           </div>
         </div>
+        <?php }} ?>
       </div>
-    </div>
-
-    <div id="Music" class="tabcontent">
-      <h3>Paris</h3>
-      <p>Paris is the capital of France.</p>
-    </div>
-
-    <div id="Fashion" class="tabcontent">
-      <h3>Tokyo</h3>
-      <p>Tokyo is the capital of Japan.</p>
-    </div>
-
-    <div id="Tech" class="tabcontent">
-      <h3>Tokyo</h3>
-      <p>Tokyo is the capital of Japan.</p>
-    </div> 
-
-    <div id="Art" class="tabcontent">
-      <h3>Tokyo</h3>
-      <p>Tokyo is the capital of Japan.</p>
     </div> 
 
     <div id="Film" class="tabcontent">
-      <h3>Tokyo</h3>
-      <p>Tokyo is the capital of Japan.</p>
+      <?php foreach($project as $p){ 
+        if (($p['kategori']=="film&video")&&$p['admin_check']=="Accepted") {?>
+        <div class="columns is-multiline">
+          <div class="column is-6-tablet is-4-desktop is-3-widescreen">
+            <div class="RC-ProjectCard">
+              <div class="css-1ql4heq card--container">
+                <div class="card--header is-paddingless">
+                  <a href="#">
+                    <div class="card--img-cover">
+                      <img src="<?= base_url('assets/img/default-project.png')?>" style="width: 100%; height: 200px; object-fit: cover;" alt="card">
+                    </div>
+                  </a>
+                </div>
+                <div class="card--body">
+                  <div class="css-8os6if">
+                    <div class="css-1wiurnj">
+                      <a href="#">
+                        <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
+                        </h3>
+                      </a>
+                      <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);">Film & Video
+                      </span>
+                      <p class="sc_auth">
+                        <span class="css-1uf8gs7">by</span>
+                        <span class="css-1qr1eue"><?= $p['username']?></span>
+                      </p>
+                      <div class="css-pczjz8"><?= $p['short_desc']?>
+                      </div>
+                    </div>
+                    <div>
+                      <progress class="progress is-danger is-12 is-small" value="<?= $p['joined_user']?>" max="<?= $p['max_user']?>" style="margin-bottom: 5px;"></progress>
+                      <div class="columns is-mobile" style="margin: 0px;">
+                        <div class="column is-6 is-size-7 is-inline-block is-paddingless">
+                          <span class="css-1uf8gs7"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
+                          <span class="css-bmw5fo">Collaborators</span>
+                        </div>
+                        <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
+                          <p class="time-left"><?= $p['days_left']?>
+                            <span class="css-fy2zpe">days left</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <?php }} ?>
+      </div>
     </div> 
 
     <div id="Games" class="tabcontent">
-      <h3>Tokyo</h3>
-      <p>Tokyo is the capital of Japan.</p>
+      <?php foreach($project as $p){ 
+        if (($p['kategori']=="games")&&$p['admin_check']=="Accepted") {?>
+        <div class="columns is-multiline">
+          <div class="column is-6-tablet is-4-desktop is-3-widescreen">
+            <div class="RC-ProjectCard">
+              <div class="css-1ql4heq card--container">
+                <div class="card--header is-paddingless">
+                  <a href="#">
+                    <div class="card--img-cover">
+                      <img src="<?= base_url('assets/img/default-project.png')?>" style="width: 100%; height: 200px; object-fit: cover;" alt="card">
+                    </div>
+                  </a>
+                </div>
+                <div class="card--body">
+                  <div class="css-8os6if">
+                    <div class="css-1wiurnj">
+                      <a href="#">
+                        <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
+                        </h3>
+                      </a>
+                      <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);"><?= $p['kategori']?>
+                      </span>
+                      <p class="sc_auth">
+                        <span class="css-1uf8gs7">by</span>
+                        <span class="css-1qr1eue"><?= $p['username']?></span>
+                      </p>
+                      <div class="css-pczjz8"><?= $p['short_desc']?>
+                      </div>
+                    </div>
+                    <div>
+                      <progress class="progress is-danger is-12 is-small" value="<?= $p['joined_user']?>" max="<?= $p['max_user']?>" style="margin-bottom: 5px;"></progress>
+                      <div class="columns is-mobile" style="margin: 0px;">
+                        <div class="column is-6 is-size-7 is-inline-block is-paddingless">
+                          <span class="css-1uf8gs7"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
+                          <span class="css-bmw5fo">Collaborators</span>
+                        </div>
+                        <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
+                          <p class="time-left"><?= $p['days_left']?>
+                            <span class="css-fy2zpe">days left</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <?php }} ?>
+      </div>
     </div> 
 
     <div id="Publish" class="tabcontent">
-      <h3>Tokyo</h3>
-      <p>Tokyo is the capital of Japan.</p>
+      <?php foreach($project as $p){ 
+        if (($p['kategori']=="publishing")&&$p['admin_check']=="Accepted") {?>
+        <div class="columns is-multiline">
+          <div class="column is-6-tablet is-4-desktop is-3-widescreen">
+            <div class="RC-ProjectCard">
+              <div class="css-1ql4heq card--container">
+                <div class="card--header is-paddingless">
+                  <a href="#">
+                    <div class="card--img-cover">
+                      <img src="<?= base_url('assets/img/default-project.png')?>" style="width: 100%; height: 200px; object-fit: cover;" alt="card">
+                    </div>
+                  </a>
+                </div>
+                <div class="card--body">
+                  <div class="css-8os6if">
+                    <div class="css-1wiurnj">
+                      <a href="#">
+                        <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
+                        </h3>
+                      </a>
+                      <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);"><?= $p['kategori']?>
+                      </span>
+                      <p class="sc_auth">
+                        <span class="css-1uf8gs7">by</span>
+                        <span class="css-1qr1eue"><?= $p['username']?></span>
+                      </p>
+                      <div class="css-pczjz8"><?= $p['short_desc']?>
+                      </div>
+                    </div>
+                    <div>
+                      <progress class="progress is-danger is-12 is-small" value="<?= $p['joined_user']?>" max="<?= $p['max_user']?>" style="margin-bottom: 5px;"></progress>
+                      <div class="columns is-mobile" style="margin: 0px;">
+                        <div class="column is-6 is-size-7 is-inline-block is-paddingless">
+                          <span class="css-1uf8gs7"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
+                          <span class="css-bmw5fo">Collaborators</span>
+                        </div>
+                        <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
+                          <p class="time-left"><?= $p['days_left']?>
+                            <span class="css-fy2zpe">days left</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <?php }} ?>
+      </div>
     </div> 
 
     <div id="Sosial" class="tabcontent">
-      <h3>Tokyo</h3>
-      <p>Tokyo is the capital of Japan.</p>
+      <?php foreach($project as $p){ 
+        if (($p['kategori']=="sosial")&&$p['admin_check']=="Accepted") {?>
+        <div class="columns is-multiline">
+          <div class="column is-6-tablet is-4-desktop is-3-widescreen">
+            <div class="RC-ProjectCard">
+              <div class="css-1ql4heq card--container">
+                <div class="card--header is-paddingless">
+                  <a href="#">
+                    <div class="card--img-cover">
+                      <img src="<?= base_url('assets/img/default-project.png')?>" style="width: 100%; height: 200px; object-fit: cover;" alt="card">
+                    </div>
+                  </a>
+                </div>
+                <div class="card--body">
+                  <div class="css-8os6if">
+                    <div class="css-1wiurnj">
+                      <a href="#">
+                        <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
+                        </h3>
+                      </a>
+                      <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);"><?= $p['kategori']?>
+                      </span>
+                      <p class="sc_auth">
+                        <span class="css-1uf8gs7">by</span>
+                        <span class="css-1qr1eue"><?= $p['username']?></span>
+                      </p>
+                      <div class="css-pczjz8"><?= $p['short_desc']?>
+                      </div>
+                    </div>
+                    <div>
+                      <progress class="progress is-danger is-12 is-small" value="<?= $p['joined_user']?>" max="<?= $p['max_user']?>" style="margin-bottom: 5px;"></progress>
+                      <div class="columns is-mobile" style="margin: 0px;">
+                        <div class="column is-6 is-size-7 is-inline-block is-paddingless">
+                          <span class="css-1uf8gs7"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
+                          <span class="css-bmw5fo">Collaborators</span>
+                        </div>
+                        <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
+                          <p class="time-left"><?= $p['days_left']?>
+                            <span class="css-fy2zpe">days left</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <?php }} ?>
+      </div>
     </div> 
-
+  </div>  
   </div>
 
   <!-- <div class="collaborate-body container" style="position: relative; top: -90px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; box-shadow: rgba(0, 0, 0, 0.08) 0px 7px 13px; padding: 40px; min-height: 620px;">
@@ -390,4 +746,18 @@
   </div>
 </div>
 </div> -->
-  <?php $this->load->view('page_footer')?>
+<!-- <table class="table table-striped table-bordered">
+    <tr>
+    <th>judul project</th>
+    <th>kategori</th>
+    </tr>
+  <?php foreach($project as $p){ ?>
+    <tr>
+      <td><?php echo $p['judul_project']; ?></td>
+      <td><?php echo $p['kategori']; ?></td>
+    </tr>
+  <?php } ?>
+</table> -->
+
+
+<?php $this->load->view('page_footer')?>
