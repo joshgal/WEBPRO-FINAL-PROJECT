@@ -50,6 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'c_krowd_home';
+$route['about'] = 'c_krowd_home';
 $route['initiate'] = 'c_krowd_initiate';
 $route['profile'] = 'c_profile';
 $route['login'] = 'auth';

@@ -138,12 +138,22 @@
     transition: 0.2s;
   }
   </style>
+
+	<?php
+	$login = base_url('Auth/login');
+	//Belum Login klik initiate bakal masuk ke page login
+
+	if($this->session->userdata('username')) {
+		$login = base_url('C_krowd_initiate');
+	// Kalau udah masuk ke page initiate
+	}?>
+
 	<div class="bungkus">
     <div class="bungkus_header">
       <div class="box_navigasi container">
         <div class="max_height columns">
           <div class="css-nil logo column is-12-mobile is-6-tablet is-inline-block is-paddingless">
-            <a href="<?= base_url('c_krowd_home/index')?>" style="display: inline-block; height: 100%;">
+            <a href="<?= base_url('c_krowd_home')?>" style="display: inline-block; height: 100%;">
             <img src="<?= base_url('assets/img/logo.png')?>" alt="logo" class="max_pos">
           </a>
           <div class="is-hidden-tablet is-inline-block" style="line-height: 80px; position: absolute; right: 15px;">
@@ -155,33 +165,48 @@
           </div>
           <div class="is-hidden-tablet navbar-menu">
             <div class="menu_item">
-              <a href="<?= base_url('c_krowd_home/about')?>" class="item_link">About</a>
+              <a href="<?= base_url('C_krowd_home/about')?>" class="item_link">About</a>
             </div>
             <div class="menu_item">
-              <a href="/login" class="item_link">Initiate +</a>
+              <a href="<?= $login?>" class="item_link">Initiate +</a>
             </div>
             <div class="button_group">
-								<a class="btn nav_button_login" href="<?= site_url('Auth/login')?>" class="nav_button_login">Login</a>
+								<a class="btn nav_button_login" href="<?= base_url('Auth/login')?>" class="nav_button_login">Login</a>
             </div>
             <div class="button_group">
-              <a class="btn nav_button_regis" href="<?= site_url('Auth/registrasi')?>">Register</a>
+              <a class="btn nav_button_regis" href="<?= base_url('Auth/registrasi')?>">Register</a>
             </div>
           </div>
         </div>
+
+
+
         <div class="column is-hidden-mobile is-6-tablet is-inline-block is-paddingless">
           <div class="css-c9d96w">
             <div class="menu_item">
-              <a href="<?= site_url('c_krowd_home/about')?>" class="item_link">About</a>
+              <a href="<?= base_url('C_krowd_home/about')?>" class="item_link">About</a>
             </div>
             <div class="menu_item">
-              <a href="/login" class="item_link">Initiate +</a>
+              <a href="<?= $login?>" class="item_link">Initiate +</a>
+            </div>
+						<?php
+						if($this->session->userdata('username')){
+						?>
+ 						<!-- HTML Kalau udah login bakal muncul icon profile-->
+
+						<?php
+						} else {
+						?>
+						<!-- HTML Kalau belum login muncul button login dan regiter-->
+						<div class="button_group">
+              	<a class="btn nav_button_login" href="<?=base_url('Auth/login')?>">Login</a>
             </div>
             <div class="button_group">
-              	<a class="btn nav_button_login" href="<?=site_url('Auth/login')?>">Login</a>
+              <a class="btn nav_button_regis" href="<?= base_url('Auth/registrasi')?>">Register</a>
             </div>
-            <div class="button_group">
-              <a class="btn nav_button_regis" href="<?= site_url('Auth/registrasi')?>">Register</a>
-            </div>
+						<?php
+						}
+						?>
           </div>
         </div>
       </div>

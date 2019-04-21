@@ -111,20 +111,30 @@
     background-color: rgb(12, 97, 33);
 }
 
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
 </style>
 <div class="container">
         <div class="card card-container">
             <h1 class="message">Let's get started!</h1>
             <form class="form-initiate">
-                <span id="reauth-email" class="reauth-email"></span>
+                <span id="reau  th-email" class="reauth-email"></span>
                 <label>Project Title</label>
                 <input type="text" id="inputEmail" class="form-control" placeholder="Project Title" required autofocus>
-                <label>Choose the category of this project</label>
-                <select class="form-control selectpicker" placeholder="Select Category"style="margin-bottom: 16px;">
+                <label for="formGroupExampleInput" class="col-form-label">Choose the category of this project</label>
+                <select class="form-control selectpicker" placeholder="Select Category" style="margin-bottom: 16px;">
                   <option hidden>Select Category</option>
                   <option>Music</option>
-                  <option>Art</option>
-                  <option>Design</option>
+                  <option>Fashion</option>
+                  <option>Technology</option>
+                  <option>Art & Culture</option>
+                  <option>Film & Video</option>
+                  <option>Games</option>
+                  <option>Publishing</option>
                   <option>Social</option>
                 </select>
                 <button class="btn btn-lg btn-block btn-next text-white" type="submit" style="background: rgb(238, 48, 89);">Next</button>

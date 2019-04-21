@@ -21,6 +21,11 @@ class C_krowd_home extends CI_Controller {
 	//function to load home menu
 	public function index()
 	{
+		$data = [
+				'username' => 'basil',
+				'email' => 'basilhaidi65@gmail.com'
+		];
+		$this->session->set_userdata($data);
 		$this->load->view('main_menu');
 	}
 
