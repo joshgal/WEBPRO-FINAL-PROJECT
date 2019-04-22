@@ -7,7 +7,7 @@ class C_krowd_home extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('krowd_model');
-    } 
+    }
 
 	public function index()
 	{
