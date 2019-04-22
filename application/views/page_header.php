@@ -174,7 +174,9 @@
 						if($this->session->userdata('username')){
 						?>
 						<!-- HTML Kalau udah login bakal muncul icon profile-->
-						<a href="/login" class="item_link"><img src="<?= base_url('assets/img/user.jpg');?>"style= "width:48px;"> </a>
+						<div class="menu_item">
+							 <a href="/login" class="item_link"><img src="<?= base_url('assets/img/user.jpg');?>"style= "width:48px; border-radius:24px;"></a>
+						</div>
 						<?php
 						} else {
 						?>
@@ -206,7 +208,9 @@
 						if($this->session->userdata('username')){
 						?>
  						<!-- HTML Kalau udah login bakal muncul icon profile-->
-						<a href="/login" class="item_link"><img src="<?= base_url('assets/img/user.jpg');?>"style= "width:48px; border-radius:24px;"> </a>
+						<div class="menu_item">
+							 <a href="/login" class="item_link"><img src="<?= base_url('assets/img/user.jpg');?>"style= "width:48px; border-radius:24px;"></a>
+						</div>
 						<?php
 						} else {
 						?>

@@ -1,4 +1,4 @@
-<?php $this->load->view('page_header')?>
+<?php $this->load->view('page_header2')?>
 <style>
 
 .card-container.card {
