@@ -45,69 +45,6 @@
         </li>
      </ul>
     </nav>
-
-    <br>
-    <br>
-
-    <style>
-    .ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content-animated {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      will-change: margin-left;
-      -webkit-transition: margin-left .3s cubic-bezier(.645,.045,.355,1);
-      -o-transition: margin-left .3s cubic-bezier(.645,.045,.355,1);
-      transition: margin-left .3s cubic-bezier(.645,.045,.355,1);
-    }
-    .ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content {
-        width: 100%;
-    }
-    .css-1ql4heq, [data-css-1ql4heq] {
-      display: block;
-      overflow: hidden;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      background: rgb(255, 255, 255) none repeat scroll 0% 0%;
-      box-shadow: rgba(155, 155, 155, 0.1) 0px 20px 40px 0px;
-    }
-    .css-8os6if, [data-css-8os6if] {
-      width: 100%;
-      padding: 20px;
-      background: rgb(255, 255, 255) none repeat scroll 0% 0%;
-    }
-    .css-1wiurnj, [data-css-1wiurnj] {
-      min-height: 250px;
-      max-height: 300px;
-    }
-    .sc_auth, [data-css-iu7k7s] {
-      margin-bottom: 4px;
-      font-size: 14px;
-    }
-    .css-1uf8gs7, [data-css-1uf8gs7] {
-      padding-right: 4px;
-    }
-    .css-1qr1eue, [data-css-1qr1eue] {
-      font-weight: 600;
-      overflow-wrap: break-word;  
-    }
-    .css-pczjz8, [data-css-pczjz8] {
-      padding-bottom: 12px;
-      font-size: 14px;
-      overflow-wrap: break-word;
-    }
-    .css-1uf8gs7, [data-css-1uf8gs7] {
-      padding-right: 4px;
-    }
-    .css-bmw5fo, [data-css-bmw5fo] {
-      color: rgb(189, 189, 189);
-    }
-    .css-fy2zpe, [data-css-fy2zpe] {
-      color: rgb(189, 189, 189);
-      padding-left: 4px;
-    }
-    </style>
-    
     <div class="card-deck">
     <div id="Popular" class="tabcontent">
     <?php foreach($project as $p){ 
@@ -115,7 +52,7 @@
       <div class="columns is-multiline">
           <div class="column is-6-tablet is-4-desktop is-3-widescreen">
             <div class="RC-ProjectCard">
-              <div class="css-1ql4heq card--container">
+              <div class="bungkuskartu card--container">
                 <div class="card--header is-paddingless">
                   <a href="#">
                     <div class="card--img-cover">
@@ -124,8 +61,8 @@
                   </a>
                 </div>
                 <div class="card--body">
-                  <div class="css-8os6if">
-                    <div class="css-1wiurnj">
+                  <div class="bungkusbadan">
+                    <div class="bungkusbadan2">
                       <a href="#">
                         <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                         </h3>
@@ -133,22 +70,22 @@
                       <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);"><?= $p['kategori']?>
                       </span>
                       <p class="sc_auth">
-                        <span class="css-1uf8gs7">by</span>
-                        <span class="css-1qr1eue"><?= $p['username']?></span>
+                        <span class="textBy">by</span>
+                        <span class="textInitiator"><?= $p['username']?></span>
                       </p>
-                      <div class="css-pczjz8"><?= $p['short_desc']?>
+                      <div class="textDeskripsi"><?= $p['short_desc']?>
                       </div>
                     </div>
                     <div>
                       <progress class="progress is-danger is-12 is-small" value="<?= $p['joined_user']?>" max="<?= $p['max_user']?>" style="margin-bottom: 5px;"></progress>
                       <div class="columns is-mobile" style="margin: 0px;">
                         <div class="column is-6 is-size-7 is-inline-block is-paddingless">
-                          <span class="css-1uf8gs7"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
-                          <span class="css-bmw5fo">Collaborators</span>
+                          <span class="textBy"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
+                          <span class="textCollaborator">Collaborators</span>
                         </div>
                         <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
                           <p class="time-left"><?= $p['days_left']?>
-                            <span class="css-fy2zpe">days left</span>
+                            <span class="textDaysLeft">days left</span>
                           </p>
                         </div>
                       </div>
@@ -168,7 +105,7 @@
         <div class="columns is-multiline">
           <div class="column is-6-tablet is-4-desktop is-3-widescreen">
             <div class="RC-ProjectCard">
-              <div class="css-1ql4heq card--container">
+              <div class="bungkuskartu card--container">
                 <div class="card--header is-paddingless">
                   <a href="#">
                     <div class="card--img-cover">
@@ -177,8 +114,8 @@
                   </a>
                 </div>
                 <div class="card--body">
-                  <div class="css-8os6if">
-                    <div class="css-1wiurnj">
+                  <div class="bungkusbadan">
+                    <div class="bungkusbadan2">
                       <a href="#">
                         <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                         </h3>
@@ -186,22 +123,22 @@
                       <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);"><?= $p['kategori']?>
                       </span>
                       <p class="sc_auth">
-                        <span class="css-1uf8gs7">by</span>
-                        <span class="css-1qr1eue"><?= $p['username']?></span>
+                        <span class="textBy">by</span>
+                        <span class="textInitiator"><?= $p['username']?></span>
                       </p>
-                      <div class="css-pczjz8"><?= $p['short_desc']?>
+                      <div class="textDeskripsi"><?= $p['short_desc']?>
                       </div>
                     </div>
                     <div>
                       <progress class="progress is-danger is-12 is-small" value="<?= $p['joined_user']?>" max="<?= $p['max_user']?>" style="margin-bottom: 5px;"></progress>
                       <div class="columns is-mobile" style="margin: 0px;">
                         <div class="column is-6 is-size-7 is-inline-block is-paddingless">
-                          <span class="css-1uf8gs7"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
-                          <span class="css-bmw5fo">Collaborators</span>
+                          <span class="textBy"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
+                          <span class="textCollaborator">Collaborators</span>
                         </div>
                         <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
                           <p class="time-left"><?= $p['days_left']?>
-                            <span class="css-fy2zpe">days left</span>
+                            <span class="textDaysLeft">days left</span>
                           </p>
                         </div>
                       </div>
@@ -221,7 +158,7 @@
         <div class="columns is-multiline">
           <div class="column is-6-tablet is-4-desktop is-3-widescreen">
             <div class="RC-ProjectCard">
-              <div class="css-1ql4heq card--container">
+              <div class="bungkuskartu card--container">
                 <div class="card--header is-paddingless">
                   <a href="#">
                     <div class="card--img-cover">
@@ -230,8 +167,8 @@
                   </a>
                 </div>
                 <div class="card--body">
-                  <div class="css-8os6if">
-                    <div class="css-1wiurnj">
+                  <div class="bungkusbadan">
+                    <div class="bungkusbadan2">
                       <a href="#">
                         <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                         </h3>
@@ -239,22 +176,22 @@
                       <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);"><?= $p['kategori']?>
                       </span>
                       <p class="sc_auth">
-                        <span class="css-1uf8gs7">by</span>
-                        <span class="css-1qr1eue"><?= $p['username']?></span>
+                        <span class="textBy">by</span>
+                        <span class="textInitiator"><?= $p['username']?></span>
                       </p>
-                      <div class="css-pczjz8"><?= $p['short_desc']?>
+                      <div class="textDeskripsi"><?= $p['short_desc']?>
                       </div>
                     </div>
                     <div>
                       <progress class="progress is-danger is-12 is-small" value="<?= $p['joined_user']?>" max="<?= $p['max_user']?>" style="margin-bottom: 5px;"></progress>
                       <div class="columns is-mobile" style="margin: 0px;">
                         <div class="column is-6 is-size-7 is-inline-block is-paddingless">
-                          <span class="css-1uf8gs7"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
-                          <span class="css-bmw5fo">Collaborators</span>
+                          <span class="textBy"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
+                          <span class="textCollaborator">Collaborators</span>
                         </div>
                         <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
                           <p class="time-left"><?= $p['days_left']?>
-                            <span class="css-fy2zpe">days left</span>
+                            <span class="textDaysLeft">days left</span>
                           </p>
                         </div>
                       </div>
@@ -274,7 +211,7 @@
       <div class="columns is-multiline">
         <div class="column is-6-tablet is-4-desktop is-3-widescreen">
           <div class="RC-ProjectCard">
-            <div class="css-1ql4heq card--container">
+            <div class="bungkuskartu card--container">
               <div class="card--header is-paddingless">
                 <a href="#">
                   <div class="card--img-cover">
@@ -283,8 +220,8 @@
                 </a>
               </div>
               <div class="card--body">
-                <div class="css-8os6if">
-                  <div class="css-1wiurnj">
+                <div class="bungkusbadan">
+                  <div class="bungkusbadan2">
                     <a href="#">
                       <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                       </h3>
@@ -292,22 +229,22 @@
                     <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);"><?= $p['kategori']?>
                     </span>
                     <p class="sc_auth">
-                      <span class="css-1uf8gs7">by</span>
-                      <span class="css-1qr1eue"><?= $p['username']?></span>
+                      <span class="textBy">by</span>
+                      <span class="textInitiator"><?= $p['username']?></span>
                     </p>
-                    <div class="css-pczjz8"><?= $p['short_desc']?>
+                    <div class="textDeskripsi"><?= $p['short_desc']?>
                     </div>
                   </div>
                   <div>
                     <progress class="progress is-danger is-12 is-small" value="<?= $p['joined_user']?>" max="<?= $p['max_user']?>" style="margin-bottom: 5px;"></progress>
                     <div class="columns is-mobile" style="margin: 0px;">
                       <div class="column is-6 is-size-7 is-inline-block is-paddingless">
-                        <span class="css-1uf8gs7"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
-                        <span class="css-bmw5fo">Collaborators</span>
+                        <span class="textBy"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
+                        <span class="textCollaborator">Collaborators</span>
                       </div>
                       <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
                         <p class="time-left"><?= $p['days_left']?>
-                          <span class="css-fy2zpe">days left</span>
+                          <span class="textDaysLeft">days left</span>
                         </p>
                       </div>
                     </div>
@@ -327,7 +264,7 @@
         <div class="columns is-multiline">
           <div class="column is-6-tablet is-4-desktop is-3-widescreen">
             <div class="RC-ProjectCard">
-              <div class="css-1ql4heq card--container">
+              <div class="bungkuskartu card--container">
                 <div class="card--header is-paddingless">
                   <a href="#">
                     <div class="card--img-cover">
@@ -336,8 +273,8 @@
                   </a>
                 </div>
                 <div class="card--body">
-                  <div class="css-8os6if">
-                    <div class="css-1wiurnj">
+                  <div class="bungkusbadan">
+                    <div class="bungkusbadan2">
                       <a href="#">
                         <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                         </h3>
@@ -345,22 +282,22 @@
                       <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);">Art and Culture
                       </span>
                       <p class="sc_auth">
-                        <span class="css-1uf8gs7">by</span>
-                        <span class="css-1qr1eue"><?= $p['username']?></span>
+                        <span class="textBy">by</span>
+                        <span class="textInitiator"><?= $p['username']?></span>
                       </p>
-                      <div class="css-pczjz8"><?= $p['short_desc']?>
+                      <div class="textDeskripsi"><?= $p['short_desc']?>
                       </div>
                     </div>
                     <div>
                       <progress class="progress is-danger is-12 is-small" value="<?= $p['joined_user']?>" max="<?= $p['max_user']?>" style="margin-bottom: 5px;"></progress>
                       <div class="columns is-mobile" style="margin: 0px;">
                         <div class="column is-6 is-size-7 is-inline-block is-paddingless">
-                          <span class="css-1uf8gs7"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
-                          <span class="css-bmw5fo">Collaborators</span>
+                          <span class="textBy"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
+                          <span class="textCollaborator">Collaborators</span>
                         </div>
                         <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
                           <p class="time-left"><?= $p['days_left']?>
-                            <span class="css-fy2zpe">days left</span>
+                            <span class="textDaysLeft">days left</span>
                           </p>
                         </div>
                       </div>
@@ -381,7 +318,7 @@
         <div class="columns is-multiline">
           <div class="column is-6-tablet is-4-desktop is-3-widescreen">
             <div class="RC-ProjectCard">
-              <div class="css-1ql4heq card--container">
+              <div class="bungkuskartu card--container">
                 <div class="card--header is-paddingless">
                   <a href="#">
                     <div class="card--img-cover">
@@ -390,8 +327,8 @@
                   </a>
                 </div>
                 <div class="card--body">
-                  <div class="css-8os6if">
-                    <div class="css-1wiurnj">
+                  <div class="bungkusbadan">
+                    <div class="bungkusbadan2">
                       <a href="#">
                         <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                         </h3>
@@ -399,22 +336,22 @@
                       <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);">Film & Video
                       </span>
                       <p class="sc_auth">
-                        <span class="css-1uf8gs7">by</span>
-                        <span class="css-1qr1eue"><?= $p['username']?></span>
+                        <span class="textBy">by</span>
+                        <span class="textInitiator"><?= $p['username']?></span>
                       </p>
-                      <div class="css-pczjz8"><?= $p['short_desc']?>
+                      <div class="textDeskripsi"><?= $p['short_desc']?>
                       </div>
                     </div>
                     <div>
                       <progress class="progress is-danger is-12 is-small" value="<?= $p['joined_user']?>" max="<?= $p['max_user']?>" style="margin-bottom: 5px;"></progress>
                       <div class="columns is-mobile" style="margin: 0px;">
                         <div class="column is-6 is-size-7 is-inline-block is-paddingless">
-                          <span class="css-1uf8gs7"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
-                          <span class="css-bmw5fo">Collaborators</span>
+                          <span class="textBy"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
+                          <span class="textCollaborator">Collaborators</span>
                         </div>
                         <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
                           <p class="time-left"><?= $p['days_left']?>
-                            <span class="css-fy2zpe">days left</span>
+                            <span class="textDaysLeft">days left</span>
                           </p>
                         </div>
                       </div>
@@ -435,7 +372,7 @@
         <div class="columns is-multiline">
           <div class="column is-6-tablet is-4-desktop is-3-widescreen">
             <div class="RC-ProjectCard">
-              <div class="css-1ql4heq card--container">
+              <div class="bungkuskartu card--container">
                 <div class="card--header is-paddingless">
                   <a href="#">
                     <div class="card--img-cover">
@@ -444,8 +381,8 @@
                   </a>
                 </div>
                 <div class="card--body">
-                  <div class="css-8os6if">
-                    <div class="css-1wiurnj">
+                  <div class="bungkusbadan">
+                    <div class="bungkusbadan2">
                       <a href="#">
                         <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                         </h3>
@@ -453,22 +390,22 @@
                       <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);"><?= $p['kategori']?>
                       </span>
                       <p class="sc_auth">
-                        <span class="css-1uf8gs7">by</span>
-                        <span class="css-1qr1eue"><?= $p['username']?></span>
+                        <span class="textBy">by</span>
+                        <span class="textInitiator"><?= $p['username']?></span>
                       </p>
-                      <div class="css-pczjz8"><?= $p['short_desc']?>
+                      <div class="textDeskripsi"><?= $p['short_desc']?>
                       </div>
                     </div>
                     <div>
                       <progress class="progress is-danger is-12 is-small" value="<?= $p['joined_user']?>" max="<?= $p['max_user']?>" style="margin-bottom: 5px;"></progress>
                       <div class="columns is-mobile" style="margin: 0px;">
                         <div class="column is-6 is-size-7 is-inline-block is-paddingless">
-                          <span class="css-1uf8gs7"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
-                          <span class="css-bmw5fo">Collaborators</span>
+                          <span class="textBy"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
+                          <span class="textCollaborator">Collaborators</span>
                         </div>
                         <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
                           <p class="time-left"><?= $p['days_left']?>
-                            <span class="css-fy2zpe">days left</span>
+                            <span class="textDaysLeft">days left</span>
                           </p>
                         </div>
                       </div>
@@ -489,7 +426,7 @@
         <div class="columns is-multiline">
           <div class="column is-6-tablet is-4-desktop is-3-widescreen">
             <div class="RC-ProjectCard">
-              <div class="css-1ql4heq card--container">
+              <div class="bungkuskartu card--container">
                 <div class="card--header is-paddingless">
                   <a href="#">
                     <div class="card--img-cover">
@@ -498,8 +435,8 @@
                   </a>
                 </div>
                 <div class="card--body">
-                  <div class="css-8os6if">
-                    <div class="css-1wiurnj">
+                  <div class="bungkusbadan">
+                    <div class="bungkusbadan2">
                       <a href="#">
                         <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                         </h3>
@@ -507,22 +444,22 @@
                       <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);"><?= $p['kategori']?>
                       </span>
                       <p class="sc_auth">
-                        <span class="css-1uf8gs7">by</span>
-                        <span class="css-1qr1eue"><?= $p['username']?></span>
+                        <span class="textBy">by</span>
+                        <span class="textInitiator"><?= $p['username']?></span>
                       </p>
-                      <div class="css-pczjz8"><?= $p['short_desc']?>
+                      <div class="textDeskripsi"><?= $p['short_desc']?>
                       </div>
                     </div>
                     <div>
                       <progress class="progress is-danger is-12 is-small" value="<?= $p['joined_user']?>" max="<?= $p['max_user']?>" style="margin-bottom: 5px;"></progress>
                       <div class="columns is-mobile" style="margin: 0px;">
                         <div class="column is-6 is-size-7 is-inline-block is-paddingless">
-                          <span class="css-1uf8gs7"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
-                          <span class="css-bmw5fo">Collaborators</span>
+                          <span class="textBy"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
+                          <span class="textCollaborator">Collaborators</span>
                         </div>
                         <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
                           <p class="time-left"><?= $p['days_left']?>
-                            <span class="css-fy2zpe">days left</span>
+                            <span class="textDaysLeft">days left</span>
                           </p>
                         </div>
                       </div>
@@ -543,7 +480,7 @@
         <div class="columns is-multiline">
           <div class="column is-6-tablet is-4-desktop is-3-widescreen">
             <div class="RC-ProjectCard">
-              <div class="css-1ql4heq card--container">
+              <div class="bungkuskartu card--container">
                 <div class="card--header is-paddingless">
                   <a href="#">
                     <div class="card--img-cover">
@@ -552,8 +489,8 @@
                   </a>
                 </div>
                 <div class="card--body">
-                  <div class="css-8os6if">
-                    <div class="css-1wiurnj">
+                  <div class="bungkusbadan">
+                    <div class="bungkusbadan2">
                       <a href="#">
                         <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                         </h3>
@@ -561,22 +498,22 @@
                       <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);"><?= $p['kategori']?>
                       </span>
                       <p class="sc_auth">
-                        <span class="css-1uf8gs7">by</span>
-                        <span class="css-1qr1eue"><?= $p['username']?></span>
+                        <span class="textBy">by</span>
+                        <span class="textInitiator"><?= $p['username']?></span>
                       </p>
-                      <div class="css-pczjz8"><?= $p['short_desc']?>
+                      <div class="textDeskripsi"><?= $p['short_desc']?>
                       </div>
                     </div>
                     <div>
                       <progress class="progress is-danger is-12 is-small" value="<?= $p['joined_user']?>" max="<?= $p['max_user']?>" style="margin-bottom: 5px;"></progress>
                       <div class="columns is-mobile" style="margin: 0px;">
                         <div class="column is-6 is-size-7 is-inline-block is-paddingless">
-                          <span class="css-1uf8gs7"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
-                          <span class="css-bmw5fo">Collaborators</span>
+                          <span class="textBy"><?= $p['joined_user']?>/<?= $p['max_user']?></span>
+                          <span class="textCollaborator">Collaborators</span>
                         </div>
                         <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
                           <p class="time-left"><?= $p['days_left']?>
-                            <span class="css-fy2zpe">days left</span>
+                            <span class="textDaysLeft">days left</span>
                           </p>
                         </div>
                       </div>
@@ -640,14 +577,14 @@
       <div role="tabpanel" aria-hidden="false" class="ant-tabs-tabpane ant-tabs-tabpane-active">
         <div class="columns is-multiline">
           <div class="column is-6-tablet is-4-desktop is-3-widescreen"><div class="RC-ProjectCard">
-            <div class="css-1ql4heq card--container">
+            <div class="bungkuskartu card--container">
               <div class="card--header is-paddingless"><a href="./project/4c882449-1d9a-417a-acec-f48b5035d2f1">
                 <div class="card--img-cover"><img src="/assets/default-project.png" style="width: 100%; height: 200px; object-fit: cover;" alt="card">
                 </div></a>
               </div>
               <div class="card--body">
-                <div class="css-8os6if card--content">
-                  <div class="css-1wiurnj card--content-top">
+                <div class="bungkusbadan card--content">
+                  <div class="bungkusbadan2 card--content-top">
                     <a href="./project/4c882449-1d9a-417a-acec-f48b5035d2f1">
                       <h3 class="title" style="font-family: heading; font-weight: bold; font-size: 24px; overflow-wrap: break-word;">Aplikasi E-commerce untuk Farmasi Besar
                       </h3>
@@ -655,24 +592,24 @@
                     <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);">Technology
                     </span>
                     <p class="css-iu7k7s author">
-                      <span class="css-1uf8gs7">by</span>
-                      <span class="css-1qr1eue">Prillyandini_Nurul</span>
+                      <span class="textBy">by</span>
+                      <span class="textInitiator">Prillyandini_Nurul</span>
                     </p>
-                    <div class="css-pczjz8">Kami membuat aplikasi yang menghubungkan penyedia stok obat-obatan maupun alat kesehatan dengan apotek-apotek hingga rumah sakit.
+                    <div class="textDeskripsi">Kami membuat aplikasi yang menghubungkan penyedia stok obat-obatan maupun alat kesehatan dengan apotek-apotek hingga rumah sakit.
                     </div>
                   </div>
                   <div><progress class="progress is-danger is-12 is-small" value="30" max="100" style="margin-bottom: 5px;">30%
                   </progress>
                   <div class="columns is-mobile" style="margin: 0px;">
                     <div class="column is-6 is-size-7 is-inline-block is-paddingless">
-                      <span class="css-1uf8gs7">3/10
+                      <span class="textBy">3/10
                       </span>
-                      <span class="css-bmw5fo">Collaborators
+                      <span class="textCollaborator">Collaborators
                       </span>
                     </div>
                     <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
                       <p class="time-left">256
-                      <span class="css-fy2zpe">days left</span>
+                      <span class="textDaysLeft">days left</span>
                     </p>
                     </div>
                   </div>
@@ -684,7 +621,7 @@
         </div>
         <div class="column is-6-tablet is-4-desktop is-3-widescreen">
           <div class="RC-ProjectCard">
-            <div class="css-1ql4heq card--container">
+            <div class="bungkuskartu card--container">
               <div class="card--header is-paddingless">
                 <a href="./project/cecd0007-ac8a-48be-acb9-b7830bc5f7e3">
                   <div class="card--img-cover">
@@ -693,8 +630,8 @@
                 </a>
               </div>
               <div class="card--body">
-                <div class="css-8os6if card--content">
-                  <div class="css-1wiurnj card--content-top">
+                <div class="bungkusbadan card--content">
+                  <div class="bungkusbadan2 card--content-top">
                     <a href="./project/cecd0007-ac8a-48be-acb9-b7830bc5f7e3">
                       <h3 class="title" style="font-family: heading; font-weight: bold; font-size: 24px; overflow-wrap: break-word;">Saman Entrepreneur
                       </h3>
@@ -702,12 +639,12 @@
                     <span class="category" style="font-size: 16px; display: block; margin-bottom: 5px; color: rgb(189, 189, 189);">Art &amp; Culture
                     </span>
                     <p class="css-iu7k7s author">
-                      <span class="css-1uf8gs7">by
+                      <span class="textBy">by
                       </span>
-                      <span class="css-1qr1eue">Luhung_Kawuryaning
+                      <span class="textInitiator">Luhung_Kawuryaning
                       </span>
                     </p>
-                    <div class="css-pczjz8">Almost no Saman dancers in Batam, I want to preserve the culture so that any event that there is entertainment or opening event is not only Melayu dance, but traditional dance outside Batam area.
+                    <div class="textDeskripsi">Almost no Saman dancers in Batam, I want to preserve the culture so that any event that there is entertainment or opening event is not only Melayu dance, but traditional dance outside Batam area.
                     </div>
                   </div>
                   <div>
@@ -715,14 +652,14 @@
                     </progress>
                     <div class="columns is-mobile" style="margin: 0px;">
                       <div class="column is-6 is-size-7 is-inline-block is-paddingless">
-                        <span class="css-1uf8gs7">0/8
+                        <span class="textBy">0/8
                         </span>
-                        <span class="css-bmw5fo">Collaborators
+                        <span class="textCollaborator">Collaborators
                         </span>
                       </div>
                       <div class="column is-6 is-size-7 is-inline-block is-paddingless" align="right">
                         <p class="time-left">112
-                          <span class="css-fy2zpe">days left
+                          <span class="textDaysLeft">days left
                           </span>
                         </p>
                       </div>

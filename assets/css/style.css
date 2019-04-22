@@ -38,6 +38,7 @@
     #footer{
       background-color: #4a4a4a;
       color: white;
+      padding: 8px;
     }
 
     #ft-item{
@@ -126,4 +127,128 @@
     box-shadow: rgba(0, 0, 0, 0.08) 0px 7px 13px; 
     padding: 40px; 
     min-height: 620px;
+  }
+
+  .linkFooter {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Rubik' sans-serif;
+    font-size: .75rem;
+    font-weight: 700;
+  }
+  .linkFooter2 {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Rubik' sans-serif;
+    padding-left: 5px;
+    font-size: .75rem;
+    font-weight: 700;
+  }
+  .linkFooter3 {
+    color: white;
+    font-family: 'Rubik' sans-serif;
+    padding-left: 5px;
+    font-size: .75rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+
+  /*Main Menu*/
+
+  .ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content-animated {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      will-change: margin-left;
+      -webkit-transition: margin-left .3s cubic-bezier(.645,.045,.355,1);
+      -o-transition: margin-left .3s cubic-bezier(.645,.045,.355,1);
+      transition: margin-left .3s cubic-bezier(.645,.045,.355,1);
+    }
+    .ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content {
+        width: 100%;
+    }
+    .bungkuskartu, [data-bungkuskartu] {
+      display: block;
+      overflow: hidden;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+      box-shadow: rgba(155, 155, 155, 0.1) 0px 20px 40px 0px;
+    }
+    .bungkusbadan {
+      width: 100%;
+      padding: 20px;
+      background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    }
+    .bungkusbadan2 {
+      min-height: 250px;
+      max-height: 300px;
+    }
+    .sc_auth {
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+    .textBy {
+      padding-right: 4px;
+    }
+    .textInitiator {
+      font-weight: 600;
+      overflow-wrap: break-word;  
+    }
+    .textDeskripsi {
+      padding-bottom: 12px;
+      font-size: 14px;
+      overflow-wrap: break-word;
+    }
+    .textCollaborator {
+      color: rgb(189, 189, 189);
+    }
+    .textDaysLeft {
+      color: rgb(189, 189, 189);
+      padding-left: 4px;
+    }
+
+    /*About*/
+
+    .bungkus_about {
+      margin-top: 100px;
+  }
+  .bungkus_dalem_about {
+      width: 100%;
+      max-width: 900px;
+      margin: 0px auto;
+      background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+  }
+  .about_content {
+    margin: auto;
+    padding: 40px 10px 200px;
+    max-width: 660px;
+  }
+
+  .judul_about {
+    margin-bottom: 40px; 
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold; 
+    font-size: 24px; 
+    line-height: 1.1;
+  }
+  .gambar_about_1{
+    width: 100%; 
+    margin-bottom: 40px; 
+    vertical-align: middle;
+  }
+  .spasi_bawah {
+      margin-bottom: 140px;
+  }
+  #gambar_about_2 {
+    width: 49.9%; 
+    vertical-align: middle; 
+    display: inline-block;  
+  }
+  .spasi_bawah_2{
+    margin-bottom: 25px;
+  }
+  #gambar_about_3{
+    max-width: 400px; 
+    width: 100%; 
+    margin-bottom: 40px;
   }

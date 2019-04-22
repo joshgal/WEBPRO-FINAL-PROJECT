@@ -17,4 +17,9 @@ class krowd_model extends CI_Model
     	$query = $this->db->get();
     	return $query->result_array();
     }
+
+    function get_specified_project_info($id)
+    {
+
+    }
 }

@@ -1,49 +1,4 @@
 <?php $this->load->view('page_header')?>
-<style>
-	.bungkus_about {
-    	margin-top: 100px;
-	}
-	.bungkus_dalem_about {
-	    width: 100%;
-	    max-width: 900px;
-	    margin: 0px auto;
-	    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
-	}
-	.about_content {
-		margin: auto;
-		padding: 40px 10px 200px;
-		max-width: 660px;
-	}
-
-	.judul_about {
-		margin-bottom: 40px; 
-		font-family: 'Rubik', sans-serif;
-		font-weight: bold; 
-		font-size: 24px; 
-		line-height: 1.1;
-	}
-	.gambar_about_1{
-		width: 100%; 
-		margin-bottom: 40px; 
-		vertical-align: middle;
-	}
-	.spasi_bawah {
-	    margin-bottom: 140px;
-	}
-	#gambar_about_2 {
-		width: 49.9%; 
-		vertical-align: middle; 
-		display: inline-block;	
-	}
-	.spasi_bawah_2{
-		margin-bottom: 25px;
-	}
-	#gambar_about_3{
-		max-width: 400px; 
-		width: 100%; 
-		margin-bottom: 40px;
-	}
-</style>
 
 <div class="bungkus_about">
 	<div class="bungkus_dalem_about">
@@ -65,8 +20,5 @@
 		</div>
 	</div>
 </div>
-
-
-
 
 <?php $this->load->view('page_footer')?>
