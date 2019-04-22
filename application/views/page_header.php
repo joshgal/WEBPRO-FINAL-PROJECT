@@ -145,7 +145,7 @@
 
 	if($this->session->userdata('username')) {
 		$login = base_url('C_krowd_initiate');
-	// Kalau udah masuk ke page initiate
+	// Kalau udah login masuk ke page initiate
 	}?>
 
 	<div class="bungkus">
@@ -170,12 +170,25 @@
             <div class="menu_item">
               <a href="<?= $login?>" class="item_link">Initiate +</a>
             </div>
-            <div class="button_group">
-								<a class="btn nav_button_login" href="<?= base_url('Auth/login')?>" class="nav_button_login">Login</a>
-            </div>
-            <div class="button_group">
-              <a class="btn nav_button_regis" href="<?= base_url('Auth/registrasi')?>">Register</a>
-            </div>
+						<?php
+						if($this->session->userdata('username')){
+						?>
+						<!-- HTML Kalau udah login bakal muncul icon profile-->
+						<a href="/login" class="item_link"><img src="<?= base_url('assets/img/user.jpg');?>"style= "width:48px;"> </a>
+						<?php
+						} else {
+						?>
+						<!-- HTML Kalau belum login muncul button login dan regiter-->
+						<div class="button_group">
+								<a class="btn nav_button_login" href="<?=base_url('Auth/login')?>">Login</a>
+						</div>
+						<div class="button_group">
+							<a class="btn nav_button_regis" href="<?= base_url('Auth/registrasi')?>">Register</a>
+						</div>
+						<?php
+						}
+						?>
+
           </div>
         </div>
 
@@ -193,7 +206,7 @@
 						if($this->session->userdata('username')){
 						?>
  						<!-- HTML Kalau udah login bakal muncul icon profile-->
-
+						<a href="/login" class="item_link"><img src="<?= base_url('assets/img/user.jpg');?>"style= "width:48px; border-radius:24px;"> </a>
 						<?php
 						} else {
 						?>

@@ -10,6 +10,10 @@ class project_model extends CI_Model
 
   public function save(){
     $post = $this->input->post(); // ambil data dari form
-    $this->pro
+    $data{
+      'judul_project' => $post['ini']
+    }
+
+
   }
 }

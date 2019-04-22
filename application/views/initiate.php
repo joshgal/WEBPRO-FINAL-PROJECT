@@ -44,7 +44,7 @@
     background-color:#ffffff;
 }
 
-.reauth-email {
+.reauth-project {
     display: block;
     color: #404040;
     line-height: 2;
@@ -122,9 +122,9 @@
         <div class="card card-container">
             <h1 class="message">Let's get started!</h1>
             <form class="form-initiate">
-                <span id="reau  th-email" class="reauth-email"></span>
+                <span class="reauth-Project"></span>
                 <label>Project Title</label>
-                <input type="text" id="inputEmail" class="form-control" placeholder="Project Title" required autofocus>
+                <input type="text" name="" id="inputProject" class="form-control" placeholder="Project Title" required autofocus>
                 <label for="formGroupExampleInput" class="col-form-label">Choose the category of this project</label>
                 <select class="form-control selectpicker" placeholder="Select Category" style="margin-bottom: 16px;">
                   <option hidden>Select Category</option>
