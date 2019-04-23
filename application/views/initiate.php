@@ -1,4 +1,4 @@
-<?php $this->load->view('page_header2')?>
+<?php $this->load->view('page_header')?>
 <style>
 
 .card-container.card {
@@ -137,7 +137,7 @@
                   <option>Publishing</option>
                   <option>Social</option>
                 </select>
-                <button class="btn btn-lg btn-block btn-next text-white" type="submit" style="background: rgb(238, 48, 89);">Next</button>
+                <a href="" class="btn btn-lg btn-block btn-next text-white" type="submit" style="background: rgb(238, 48, 89);">Next</a>
             </form><!-- /form -->
         </div><!-- /card-container -->
     </div><!-- /container -->

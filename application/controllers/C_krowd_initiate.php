@@ -18,10 +18,15 @@ class C_krowd_initiate extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	//function to load home menu
+	//function to load initiate menu
 	public function index()
 	{
 		$this->load->view('initiate');
+	}
+
+	public function edit()
+	{
+		$this->load->view('edit_initiate');
 	}
 
 	public function about()

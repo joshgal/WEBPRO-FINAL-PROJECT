@@ -175,7 +175,7 @@
 						?>
 						<!-- HTML Kalau udah login bakal muncul icon profile-->
 						<div class="menu_item">
-							 <a href="/login" class="item_link"><img src="<?= base_url('assets/img/user.jpg');?>"style= "width:48px; border-radius:24px;"></a>
+							 <a class="item_link"><img src="<?= base_url('assets/img/user.jpg');?>"style= "width:48px; border-radius:24px;"></a>
 						</div>
 						<?php
 						} else {
