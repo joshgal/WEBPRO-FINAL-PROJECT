@@ -40,5 +40,24 @@ class krowd_model extends CI_Model
         $query = $this->db->get();
         return $query->result_array(); 
     }
+    function get_collaborator_projects($id)
+    {
+        $this->db->select('count(queue.id_user)as "colpro"');
+        $this->db->from('queue');
+        $this->db->where('queue.id_user =', $id);
+        $query = $this->db->get();
+        return $query->result_array(); 
+          
+    }
+    function get_initiated_projects($id)
+    {
+        $this->db->select('count(project.id_project)as"inpro"');
+        $this->db->from('project');
+        $this->db->join('user', 'user.id_user = project.id_user');
+        $this->db->where('user.id_user =', $id);
+        $query = $this->db->get();
+        return $query->result_array(); 
+          
+    }
 
 }

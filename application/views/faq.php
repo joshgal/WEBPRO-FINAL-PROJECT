@@ -1,50 +1,6 @@
 <?php $this->load->view('page_header')?>
 
-<style>
-.bungkusIsiFooter {
-    padding-bottom: 100px;
-}
-.headingIsiFooter {
-    font-size: 36px;
-    font-family: heading-bold;
-}
-.textIsiFooter2 {
-    font-size: 18px;
-    font-family: heading-semi-bold;
-    margin-bottom: 8px;
-}
-.textIsiFooterDesc {
-    font-size: 14px;
-}
-.spasiIsiFooter {
-    margin: 30px 0px;
-}
-.garisPinkPrivacy {
-    border-top: 1px solid rgb(246, 74, 123);
-    width: 40px;
-    display: block;
-    margin: 24px 0px;
-}
-.linkPadding, [data-linkPadding] {
-    padding-left: 5px;
-}
-body a {
-    color: #ee3059;
-}
-a {
-    color: #3273dc;
-    cursor: pointer;
-    text-decoration: none;
-}
-.linkMargin, [data-linkMargin] {
-    margin: 10px 0px;
-}
-.bungkusluarpisan {
-    min-height: 100vh;
-    position: relative;
-    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
-}
-</style>
+<link rel="stylesheet" href="<?= base_url('assets/css/faq.css')?>"/>
 <div class="bungkusluarpisan">
 <div style="position: relative; padding: 120px 40px 0px; color: rgb(74, 74, 74); background-color: white;" class="container">
 			<div class="bungkusIsiFooter for-starter">

@@ -1,188 +1,6 @@
 <?php $this->load->view('page_header')?>
 
-<style>
-.bungkusDetilProject2 {
-    min-height: 620px;
-}
-
-.bungkusDetilProject2 {
-    padding-top: 150px;
-    display: flex;
-}
-
-.posProject {
-    margin-bottom: 60px;
-    flex: none;
-    width: 75%;
-}
-
-.posInitiator {
-    margin-bottom: 60px;
-    flex: none;
-    width: 25%;
-}
-
-.textJudulProjectDetil {
-    width: 100%;
-    font-family: heading-bold;
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    line-height: 1;
-}
-
-.textKategori {
-    color: rgb(155, 155, 155);
-    display: inline-block;
-    padding-right: 20px;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid rgb(238, 48, 89);
-}
-
-.textBriefProject {
-    display: block;
-    margin-bottom: 40px;
-}
-
-span {
-    font-style: inherit;
-    font-weight: inherit;
-}
-
-.bungkusInitiator {
-    background: white none repeat scroll 0% 0%;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 7px 13px;
-    position: relative;
-    overflow: auto;
-    padding: 20px;
-}
-
-.imgInitiator {
-    height: 120px;
-    max-width: 120px;
-    border-radius: 50%;
-    margin: 10px auto auto;
-    display: block;
-}
-
-.textNamaInit {
-    font-size: 1.25rem;
-    font-weight: 600;
-}
-
-.textJobdesk {
-    font-size: 0.875rem;
-    line-height: 2;
-}
-
-.textKota {
-    font-size: 0.75rem;
-    color: rgb(155, 155, 155);
-    line-height: 2;
-}
-
-.textCollaborator, [data-textCollaborator] {
-    padding-right: 4px;
-}
-
-.btnCollaborate {
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 10px 20px;
-    margin-top: 30px;
-    transition: all 0.2s ease 0s;
-    border: 1px solid rgba(230, 50, 80, 0.9);
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 5px;
-    cursor: pointer;
-    background: rgb(238, 48, 89) none repeat scroll 0% 0%;
-    letter-spacing: 1px;
-    text-align: center;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: white;
-}
-
-.textBackStory {
-	font-size: 0.75rem;
-    line-height: 2;
-    margin-bottom: 40px;
-}
-
-.textColabTimeline {
-    display: inline-block;
-    padding-bottom: 5px;
-    margin-bottom: 16px;
-    border-bottom: 1px solid red;
-    font-weight: 600;
-}
-
-.imgProject {
-    width: 100%;
-}
-
-.paddingBungkusProject {
-    padding: 50px;
-}
-
-.backgorundProject {
-    background: white none repeat scroll 0% 0%;
-    position: relative;
-    top: -16px;
-}
-.boxDetilProject {
-    background: white none repeat scroll 0% 0%;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 7px 13px;
-    position: relative;
-    overflow: auto;
-}
-
-.bungkusJurnalProject2 {
-    width: 100%;
-    background: white none repeat scroll 0% 0%;
-    padding: 20px 50px;
-    font-size: 18px;
-}
-.CollaborationBungkus {
-    border-top: 2px solid rgb(239, 239, 239);
-    margin-left: 50px;
-    margin-right: 50px;
-}
-.CollaborationBungkus2 {
-    width: 100%;
-    min-height: 60px;
-    padding: 20px 50px;
-}
-.CollaborationBungkusPangluarna {
-    background: white none repeat scroll 0% 0%;
-    position: relative;
-    top: -16px;
-}
-.CollabLokasi {
-    overflow: hidden;
-    text-align: center;
-}
-.CollabImage {
-    max-height: 100%;
-    max-width: 100%;
-    border-radius: 50%;
-}
-.CollabNgaran {
-    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
-    padding-left: 10px;
-}
-.CollabDesc {
-    font-size: 0.75rem;
-    display: block;
-    margin-bottom: 5px;
-}
-</style>
-
-<script>
-	document.getElementByClass("nav-link active").click();
-</script>
-
+<link rel="stylesheet" href="<?= base_url('assets/css/detil_project.css')?>"/>
 <?php foreach($project as $p){?>
 <div class="bungkusDProject container">
 	<div class="bungkusDetilProject2 columns">
@@ -230,7 +48,13 @@ span {
 								<div>
 									<div class=""></div>
 										<div class="CollaborationBungkus2 is-12">
-											<?php foreach($collab as $c){?>
+											<?php
+												$ci =& get_instance();
+												$ci->load->model('krowd_model');
+											?>
+											<?php foreach($collab as $c){
+												$data = $ci->krowd_model->get_collaborator_projects($c['id_user']);
+												$data2 = $ci->krowd_model->get_initiated_projects($c['id_user']);?>
 											<div class="css-nil columns is-mobile">
 												<div class="CollabLokasi column is-2-desktop is-3-tablet is-6-mobile">
 													<img src="<?= base_url('assets/img/user.jpg')?>" alt="card" class="CollabImage"></div>
@@ -245,10 +69,14 @@ span {
 																	<div><?= $c['kota']?></div>
 																</div>
 																<div class="column is-3">
-																	<div>Collaborated Project: 1</div>
+																	<?php foreach($data as $d){?>
+																	<div>Collaborated Project: <?= $d['colpro']?></div>
+																	<?php }?>
 																</div>
 																<div class="column is-3">
-																	<div>Initiated Project: 0</div>
+																	<?php foreach($data2 as $d2){?>
+																	<div>Initiated Project: <?= $d2['inpro']?></div>
+																	<?php }?>
 																</div>
 															</div>
 														</span>
