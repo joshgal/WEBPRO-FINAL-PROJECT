@@ -17,31 +17,31 @@
     <nav class="navbar navbar-expand-sm justify-content-between" id="navMainMenu">
       <ul class="navbar-nav nav-fill w-100 align-items-start">
         <li class="nav-item">
-            <a class="nav-link active" id="ktg-menu" onclick="openCity(event, 'Popular')">Popular</a>
+            <a class="nav-link active" id="ktg-menu" onclick="openMenu(event, 'Popular')">Popular</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="ktg-menu" onclick="openCity(event, 'Music')">Music</a>
+            <a class="nav-link" id="ktg-menu" onclick="openMenu(event, 'Music')">Music</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="ktg-menu" onclick="openCity(event, 'Fashion')">Fashion</a>
+            <a class="nav-link" id="ktg-menu" onclick="openMenu(event, 'Fashion')">Fashion</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="ktg-menu" onclick="openCity(event, 'Tech')">Technology</a>
+            <a class="nav-link" id="ktg-menu" onclick="openMenu(event, 'Tech')">Technology</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="ktg-menu" onclick="openCity(event, 'Art')">Art & Culture</a>
+            <a class="nav-link" id="ktg-menu" onclick="openMenu(event, 'Art')">Art & Culture</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="ktg-menu" onclick="openCity(event, 'Film')">Film & Video</a>
+            <a class="nav-link" id="ktg-menu" onclick="openMenu(event, 'Film')">Film & Video</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="ktg-menu" onclick="openCity(event, 'Games')">Games</a>
+            <a class="nav-link" id="ktg-menu" onclick="openMenu(event, 'Games')">Games</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="ktg-menu" onclick="openCity(event, 'Publish')">Publishing</a>
+            <a class="nav-link" id="ktg-menu" onclick="openMenu(event, 'Publish')">Publishing</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="ktg-menu" onclick="openCity(event, 'Sosial')">Social</a>
+            <a class="nav-link" id="ktg-menu" onclick="openMenu(event, 'Sosial')">Social</a>
         </li>
      </ul>
     </nav>
@@ -63,7 +63,7 @@
                 <div class="card--body">
                   <div class="bungkusbadan">
                     <div class="bungkusbadan2">
-                      <a href="#">
+                      <a href="<?= base_url('c_krowd_home/detil_project')?>">
                         <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                         </h3>
                       </a>

@@ -20,8 +20,7 @@
   <link rel="icon" href="<?= base_url('assets/img/favicon.png')?>" sizes="16x16" type="image/png">
 
   <script>
-    function openCity(evt, kategori) {
-      // Declare all variables
+    function openMenu(evt, kategori) {
       var i, tabcontent, tablinks;
 
       // Get all elements with class="tabcontent" and hide them
@@ -31,7 +30,7 @@
       }
 
       // Get all elements with class="tablinks" and remove the class "active"
-      tablinks = document.getElementsByClassName("tablinks");
+      tablinks = document.getElementsByClassName("nav-link");
       for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
