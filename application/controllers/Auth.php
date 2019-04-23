@@ -41,8 +41,11 @@ class Auth extends CI_Controller {
              $this->Auth_model->registrasi();
                redirect('auth/login');
             }
+    }
 
-
+    public funcntion logout(){
+        $this->session->sess_destroy();
+        redirect('C_krowd_home');
     }
 
 }
