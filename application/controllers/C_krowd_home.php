@@ -31,8 +31,10 @@ class C_krowd_home extends CI_Controller {
 	{
 		$this->load->view('term');
 	}
-	public function detil_project()
+	public function detil_project($id)
 	{
-		$this->load->view('detil_project');
+		$data['project'] = $this->krowd_model->get_specified_project_info($id);
+		$data['collab'] = $this->krowd_model->get_project_collaborators($id);
+		$this->load->view('detil_project', $data);
 	}
 }

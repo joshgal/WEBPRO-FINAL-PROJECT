@@ -19,7 +19,7 @@
 .posInitiator {
     margin-bottom: 60px;
     flex: none;
-    width: 30%;
+    width: 25%;
 }
 
 .textJudulProjectDetil {
@@ -137,18 +137,59 @@ span {
     position: relative;
     overflow: auto;
 }
+
+.bungkusJurnalProject2 {
+    width: 100%;
+    background: white none repeat scroll 0% 0%;
+    padding: 20px 50px;
+    font-size: 18px;
+}
+.CollaborationBungkus {
+    border-top: 2px solid rgb(239, 239, 239);
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.CollaborationBungkus2 {
+    width: 100%;
+    min-height: 60px;
+    padding: 20px 50px;
+}
+.CollaborationBungkusPangluarna {
+    background: white none repeat scroll 0% 0%;
+    position: relative;
+    top: -16px;
+}
+.CollabLokasi {
+    overflow: hidden;
+    text-align: center;
+}
+.CollabImage {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 50%;
+}
+.CollabNgaran {
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    padding-left: 10px;
+}
+.CollabDesc {
+    font-size: 0.75rem;
+    display: block;
+    margin-bottom: 5px;
+}
 </style>
 
 <script>
 	document.getElementByClass("nav-link active").click();
 </script>
 
+<?php foreach($project as $p){?>
 <div class="bungkusDProject container">
 	<div class="bungkusDetilProject2 columns">
 		<div class="posProject column is-9">
-			<h1 class="textJudulProjectDetil">Aplikasi E-commerce untuk Farmasi Besar</h1>
-			<div class="textKategori">Technology</div>
-			<span class="textBriefProject">Kami membuat aplikasi yang menghubungkan penyedia stok obat-obatan maupun alat kesehatan dengan apotek-apotek hingga rumah sakit.</span>
+			<h1 class="textJudulProjectDetil"><?= $p['judul_project']?></h1>
+			<div class="textKategori"><?= $p['kategori']?></div>
+			<span class="textBriefProject"><?= $p['short_desc']?></span>
 			<div class="boxDetilProject">
 				<div class="ant-tabs ant-tabs-top ant-tabs-line">
 					<div role="tablist" class="ant-tabs-bar" tabindex="0">
@@ -175,18 +216,50 @@ span {
 						  	<img src="<?= base_url('assets/img/default-project.png')?>" alt="card" class="imgProject">
 						  	<div class="paddingBungkusProject">
 								<div class="textColabTimeline">Background Story</div>
-									<div class="textBackStory">Ada sebuah artikel yang pernah saya baca menjelaskan tentang e-commerce di dunia kesehatan lebih kuat di lingkup B2B yaitu business to business. Hal itu mendorong saya untuk membuat suatu aplikasi e-commerce untuk perdagangan besar farmasi, yang mana menghubungkan antara Distributor penyedia obat-obatan dan alat-alat kesehatan dengan apotek-apotek, toko obat, maupun rumah sakit yang membutuhkan stok tertentu. 
-
-									Seperti yang kita tahu, penggunaan obat-obatan dan alat-alat kesehatan terus bertambah dan sangat di butuhkan kapanpun. Hal ini mendorong setiap apotek atau toko obat bahkan rumah sakit, untuk selalu menyetok barang dan berusaha agar barang tidak kosong di toko mereka. Namun terkadang pemesanan yang terlalu banyak aturan menjadi hambatan, belum lagi proses pengiriman. Akan sangat menguntungkan jika ada aplikasi e-commerce yang menyediakan data barang-barang yang mereka butuhkan, sehingga mereka tahu harus memesan dimana. Hal ini akan mempercepat segala proses setelahnya.</div>
+									<div class="textBackStory"><?= $p['deskripsi']?></div>
 									<div class="textColabTimeline">Collaborators’ Task &amp; Timeline</div>
 								<div class="textBackStory"></div>
 							</div>
 						</div>
 						<div id="jurnal" class="tabcontent backgorundProject">
-						  
+						  	<div class="bungkusJurnalProject">
+						  		<div class="bungkusJurnalProject2">'No journal available.'</div></div>
 						</div>
 						<div id="colab" class="tabcontent backgorundProject">
-						  
+							<div class="">
+								<div>
+									<div class=""></div>
+										<div class="CollaborationBungkus2 is-12">
+											<?php foreach($collab as $c){?>
+											<div class="css-nil columns is-mobile">
+												<div class="CollabLokasi column is-2-desktop is-3-tablet is-6-mobile">
+													<img src="<?= base_url('assets/img/user.jpg')?>" alt="card" class="CollabImage"></div>
+													<div class="CollabNgaran column is-10-desktop is-9-tablet is-6-mobile">
+														<span style="font-size: 1rem; color: rgb(155, 155, 155);" class="css-nil"><?= $c['username']?>
+														</span>
+														<span class="CollabDesc description">
+															<div class="columns">
+																<div class="column is-3">
+																</div>
+																<div class="column is-3">
+																	<div><?= $c['kota']?></div>
+																</div>
+																<div class="column is-3">
+																	<div>Collaborated Project: 1</div>
+																</div>
+																<div class="column is-3">
+																	<div>Initiated Project: 0</div>
+																</div>
+															</div>
+														</span>
+													</div>
+												<div class=""></div>
+											</div>
+											<?php }?>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 				</div>
 			</div>
@@ -195,29 +268,32 @@ span {
 			<div class="bungkusInitiator">
 				<img src="<?= base_url('assets/img/user.jpg')?>" alt="card" class="imgInitiator">
 				<div class="body has-text-centered">
-					<div class="textNamaInit">Prillyandini_Nurul</div>
+					<div class="textNamaInit"><?= $p['username']?></div>
 					<div class="textJobdesk">
 						<dl>
 							<div>
-								<dt>Programmer</dt>
+								<dt><?= $p['bidang_keahlian']?></dt>
 							</div>
 						</dl>
 					</div>
-					<div class="textKota">KOTA BANDUNG</div>
-					<progress class="progress is-danger is-12 is-small" value="30" max="100" style="height: 6px; margin-top: 20px; margin-bottom: 5px;">90%</progress>
+					<div class="textKota"><?= $p['lokasi']?></div>
+					<progress class="progress is-danger is-12 is-small" value="<?= $p['joined_user']?>" max="<?= $p['max_user']?>" style="height: 6px; margin-top: 20px; margin-bottom: 5px;"></progress>
 					<div class="columns is-mobile">
 						<div class="column is-6 is-size-7 is-inline-block" align="left">
-							<span class="textCollaborator is-black">3/10</span>Collaborators
+							<span class="textCollaborator is-black"><?= $p['joined_user']?>/<?= $p['max_user']?></span>Collaborators
 						</div>
 						<div class="column is-6 is-size-7 is-inline-block" align="right">
-							<p class="time-left">251 days left</p>
+							<p class="time-left"><?= $p['days_left']?> days left</p>
 						</div>
 					</div>
+					<?php if($p['joined_user'] != $p['max_user']) {?>
 					<button type="submit" class="btnCollaborate">Collaborate</button>
+					<?php }?>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+<?php }?>
 
 <?php $this->load->view('page_footer')?>

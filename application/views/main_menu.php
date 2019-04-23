@@ -63,7 +63,7 @@
                 <div class="card--body">
                   <div class="bungkusbadan">
                     <div class="bungkusbadan2">
-                      <a href="<?= base_url('c_krowd_home/detil_project')?>">
+                      <a href="<?= base_url('c_krowd_home/detil_project/')?><?= $p['id_project']?>">
                         <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                         </h3>
                       </a>
@@ -116,7 +116,7 @@
                 <div class="card--body">
                   <div class="bungkusbadan">
                     <div class="bungkusbadan2">
-                      <a href="#">
+                      <a href="<?= base_url('c_krowd_home/detil_project/')?><?= $p['id_project']?>">
                         <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                         </h3>
                       </a>
@@ -169,7 +169,7 @@
                 <div class="card--body">
                   <div class="bungkusbadan">
                     <div class="bungkusbadan2">
-                      <a href="#">
+                      <a href="<?= base_url('c_krowd_home/detil_project/')?><?= $p['id_project']?>">
                         <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                         </h3>
                       </a>
@@ -222,7 +222,7 @@
               <div class="card--body">
                 <div class="bungkusbadan">
                   <div class="bungkusbadan2">
-                    <a href="#">
+                    <a href="<?= base_url('c_krowd_home/detil_project/')?><?= $p['id_project']?>">
                       <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                       </h3>
                     </a>
@@ -275,7 +275,7 @@
                 <div class="card--body">
                   <div class="bungkusbadan">
                     <div class="bungkusbadan2">
-                      <a href="#">
+                      <a href="<?= base_url('c_krowd_home/detil_project/')?><?= $p['id_project']?>">
                         <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                         </h3>
                       </a>
@@ -329,7 +329,7 @@
                 <div class="card--body">
                   <div class="bungkusbadan">
                     <div class="bungkusbadan2">
-                      <a href="#">
+                      <a href="<?= base_url('c_krowd_home/detil_project/')?><?= $p['id_project']?>">
                         <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                         </h3>
                       </a>
@@ -383,7 +383,7 @@
                 <div class="card--body">
                   <div class="bungkusbadan">
                     <div class="bungkusbadan2">
-                      <a href="#">
+                      <a href="<?= base_url('c_krowd_home/detil_project/')?><?= $p['id_project']?>">
                         <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                         </h3>
                       </a>
@@ -437,7 +437,7 @@
                 <div class="card--body">
                   <div class="bungkusbadan">
                     <div class="bungkusbadan2">
-                      <a href="#">
+                      <a href="<?= base_url('c_krowd_home/detil_project/')?><?= $p['id_project']?>">
                         <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                         </h3>
                       </a>
@@ -491,7 +491,7 @@
                 <div class="card--body">
                   <div class="bungkusbadan">
                     <div class="bungkusbadan2">
-                      <a href="#">
+                      <a href="<?= base_url('c_krowd_home/detil_project/')?><?= $p['id_project']?>">
                         <h3 class="title" style="font-family: 'Rubik' sans-serif; font-weight: bold; font-size: 20px; overflow-wrap: break-word;"><?= $p['judul_project']?>
                         </h3>
                       </a>
