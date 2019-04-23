@@ -16,7 +16,7 @@ class Auth_model extends CI_Model {
                     $this->session->set_userdata($data);
                     redirect('user');
             }else{
-                $this->session->set_flashdata('message','Gk ada');
+                $this->session->set_flashdata('flash','<div class="text-danger" role="alert">Unable to log in with provided credentials.</div>');
             }
 
         }else{
