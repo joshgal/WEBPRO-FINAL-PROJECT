@@ -1,33 +1,6 @@
 <?php $this->load->view('page_header')?>
-<style>
-.bungkusIsiFooter {
-    padding-bottom: 50px;
-}
-.bungkusIsiFooter {
-    font-size: 36px;
-    font-family: heading-bold;
-}
-.textPrivacyHead {
-    font-size: 14px;
-    margin-bottom: 14px;
-}
-.garisPinkPrivacy {
-    border-top: 1px solid rgb(246, 74, 123);
-    width: 40px;
-    display: block;
-    margin: 24px 0px;
-}
-.textInfoPrivacy {
-    font-size: 18px;
-    font-family: heading-semi-bold;
-    margin-bottom: 8px;
-}
-.bungkusluarpisan {
-    min-height: 100vh;
-    position: relative;
-    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
-}
-</style>
+
+<link rel="stylesheet" href="<?= base_url('assets/css/privacy.css')?>"/>
 <div class="bungkusluarpisan">
 <div style="position: relative; padding: 120px 40px 0px; background-color: white;" class="Privacy-body container">
 	<div class="bungkusPrivacy for-starter">
