@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css')?>"/>
   <link rel="stylesheet" href="<?= base_url('assets/css/style.css')?>"/>
   <link rel="stylesheet" href="<?= base_url('assets/css/main.11b91c4a.css')?>"/>
-
+  <link rel="stylesheet" href="<?= base_url('assets/css/sb-admin-2.min.css')?>"/>
 	<script src="<?= base_url('assets/js/bootstrap.min.js')?>"></script>
   <script src="<?= base_url('assets/js/jquery.min.js')?>"></script>
 
@@ -20,7 +20,8 @@
   <link rel="icon" href="<?= base_url('assets/img/favicon.png')?>" sizes="16x16" type="image/png">
 
   <script>
-    function openMenu(evt, kategori) {
+    function openCity(evt, kategori) {
+      // Declare all variables
       var i, tabcontent, tablinks;
 
       // Get all elements with class="tabcontent" and hide them
@@ -30,7 +31,7 @@
       }
 
       // Get all elements with class="tablinks" and remove the class "active"
-      tablinks = document.getElementsByClassName("nav-link");
+      tablinks = document.getElementsByClassName("tablinks");
       for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
@@ -137,22 +138,12 @@
     transition: 0.2s;
   }
   </style>
-
-	<?php
-	$login = base_url('Auth/login');
-	//Belum Login klik initiate bakal masuk ke page login
-
-	if($this->session->userdata('username')) {
-		$login = base_url('C_krowd_initiate');
-	// Kalau udah login masuk ke page initiate
-	}?>
-
 	<div class="bungkus">
     <div class="bungkus_header">
       <div class="box_navigasi container">
         <div class="max_height columns">
           <div class="css-nil logo column is-12-mobile is-6-tablet is-inline-block is-paddingless">
-            <a href="<?= base_url('c_krowd_home')?>" style="display: inline-block; height: 100%;">
+            <a href="<?= base_url('c_krowd_home/index')?>" style="display: inline-block; height: 100%;">
             <img src="<?= base_url('assets/img/logo.png')?>" alt="logo" class="max_pos">
           </a>
           <div class="is-hidden-tablet is-inline-block" style="line-height: 80px; position: absolute; right: 15px;">
@@ -164,65 +155,54 @@
           </div>
           <div class="is-hidden-tablet navbar-menu">
             <div class="menu_item">
-              <a href="<?= base_url('C_krowd_home/about')?>" class="item_link">About</a>
+              <a href="<?= base_url('c_krowd_home/about')?>" class="item_link">About</a>
             </div>
             <div class="menu_item">
-              <a href="<?= $login?>" class="item_link">Initiate +</a>
+              <a href="/login" class="item_link">Initiate +</a>
             </div>
-						<?php
-						if($this->session->userdata('username')){
-						?>
-						<!-- HTML Kalau udah login bakal muncul icon profile-->
-						<div class="menu_item">
-							 <a class="item_link"><img src="<?= base_url('assets/img/user.jpg');?>"style= "width:48px; border-radius:24px;"></a>
-						</div>
-						<?php
-						} else {
-						?>
-						<!-- HTML Kalau belum login muncul button login dan regiter-->
-						<div class="button_group">
-								<a class="btn nav_button_login" href="<?=base_url('Auth/login')?>">Login</a>
-						</div>
-						<div class="button_group">
-							<a class="btn nav_button_regis" href="<?= base_url('Auth/registrasi')?>">Register</a>
-						</div>
-						<?php
-						}
-						?>
-
+            <div class="button_group">
+              <button class="nav_button_login">Login</button>
+            </div>
+            <div class="button_group">
+              <button class="nav_button_regis">Register</button>
+            </div>
           </div>
         </div>
-
-
-
         <div class="column is-hidden-mobile is-6-tablet is-inline-block is-paddingless">
           <div class="css-c9d96w">
             <div class="menu_item">
-              <a href="<?= base_url('C_krowd_home/about')?>" class="item_link">About</a>
+              <a href="<?= base_url('c_krowd_home/about')?>" class="item_link">About</a>
             </div>
             <div class="menu_item">
-              <a href="<?= $login?>" class="item_link">Initiate +</a>
+              <a href="/login" class="item_link">Initiate +</a>
             </div>
-						<?php
-						if($this->session->userdata('username')){
-						?>
- 						<!-- HTML Kalau udah login bakal muncul icon profile-->
-						<div class="menu_item">
-							 <a class="item_link"><img src="<?= base_url('assets/img/user.jpg');?>"style= "width:48px; border-radius:24px;"></a>
-						</div>
-						<?php
-						} else {
-						?>
-						<!-- HTML Kalau belum login muncul button login dan regiter-->
-						<div class="button_group">
-              	<a class="btn nav_button_login" href="<?=base_url('Auth/login')?>">Login</a>
-            </div>
-            <div class="button_group">
-              <a class="btn nav_button_regis" href="<?= base_url('Auth/registrasi')?>">Register</a>
-            </div>
-						<?php
-						}
-						?>
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                
+                <img src="<?= base_url('assets/img/user.jpg');?>" alt="profile" class="ant-dropdown-trigger" style="width: 48px; max-width: 48px; height: 48px; border-radius: 24px; display: flex; margin: auto 10px;">
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Settings
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Activity Log
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+            
           </div>
         </div>
       </div>
