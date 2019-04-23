@@ -1,3 +1,7 @@
+    body {
+      font-family: 'Rubik' sans-serif;
+    }
+
     #navbar{
   		padding-top:0px;
   		padding-bottom:0px;
@@ -80,6 +84,13 @@
     color: #ee3059;
   }
      /* Style the tab */
+  
+
+  .nav-link.active{
+    border-bottom: 2px solid #ec2c59; 
+    color: #ee3059;
+  }
+  
   .tab {
     border: 0px;
     width: 100%;
@@ -87,12 +98,6 @@
     background-color: white;
     border-bottom: 2px solid grey;
   }
-
-  .nav-link.active{
-    border-bottom: 2px solid #ec2c59; 
-    color: #ee3059;
-  }
-  
   #tabspace{
     padding: 20px;
   }
