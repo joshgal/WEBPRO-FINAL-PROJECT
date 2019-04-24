@@ -38,8 +38,8 @@ class Auth extends CI_Controller {
         ]);
         $this->form_validation->set_rules('password','Password','required|trim|min_length[3]|matches[re_password]',[
             'matches' => 'Password do not match',
-            
-            
+
+
         ]);
         $this->form_validation->set_rules('re_password','Re_password','required|trim|min_length[3]|matches[password]');
         $this->form_validation->set_rules('go', 'Go', 'required',[
@@ -54,7 +54,7 @@ class Auth extends CI_Controller {
             }
     }
 
-    public funcntion logout(){
+    public function logout(){
         $this->session->sess_destroy();
         redirect('C_krowd_home');
     }

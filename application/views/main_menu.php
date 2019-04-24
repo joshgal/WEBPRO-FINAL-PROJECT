@@ -2,6 +2,14 @@
 
 <link rel="stylesheet" href="<?= base_url('assets/css/main_menu.css')?>"/>
 
+<style>
+.backgorund_judul_main {
+    margin-top: 80px;
+    padding: 120px 0px 200px;
+    background: url('<?= base_url('assets/img/collaborate.png')?>') center center / cover no-repeat;
+    text-align: center
+  }
+</style>
 <div class="backgorund_judul_main">
     <h1 id="judul">Collaborate To Make Bigger Things!</h1>
 </div>
@@ -40,7 +48,7 @@
     </nav>
     <div class="card-deck">
     <div id="Popular" class="tabcontent">
-    <?php foreach($project as $p){ 
+    <?php foreach($project as $p){
       if (($p['popularity']=="yes")&&$p['admin_check']=="Accepted") {?>
       <div class="columns is-multiline">
           <div class="column is-6-tablet is-4-desktop is-3-widescreen">
@@ -91,9 +99,9 @@
         </div>
       <?php }} ?>
     </div>
-    
+
     <div id="Music" class="tabcontent">
-      <?php foreach($project as $p){ 
+      <?php foreach($project as $p){
         if (($p['kategori']=="music")&&$p['admin_check']=="Accepted") {?>
         <div class="columns is-multiline">
           <div class="column is-6-tablet is-4-desktop is-3-widescreen">
@@ -146,7 +154,7 @@
       </div>
 
     <div id="Fashion" class="tabcontent">
-      <?php foreach($project as $p){ 
+      <?php foreach($project as $p){
         if (($p['kategori']=="fashion")&&$p['admin_check']=="Accepted") {?>
         <div class="columns is-multiline">
           <div class="column is-6-tablet is-4-desktop is-3-widescreen">
@@ -199,7 +207,7 @@
     </div>
 
     <div id="Tech" class="tabcontent">
-      <?php foreach($project as $p){ 
+      <?php foreach($project as $p){
       if (($p['popularity']=="yes")&&$p['admin_check']=="Accepted") {?>
       <div class="columns is-multiline">
         <div class="column is-6-tablet is-4-desktop is-3-widescreen">
@@ -249,10 +257,10 @@
         </div>
       </div>
       <?php }} ?>
-    </div> 
+    </div>
 
     <div id="Art" class="tabcontent">
-      <?php foreach($project as $p){ 
+      <?php foreach($project as $p){
         if (($p['kategori']=="art")&&$p['admin_check']=="Accepted") {?>
         <div class="columns is-multiline">
           <div class="column is-6-tablet is-4-desktop is-3-widescreen">
@@ -303,10 +311,10 @@
         </div>
         <?php }} ?>
       </div>
-    </div> 
+    </div>
 
     <div id="Film" class="tabcontent">
-      <?php foreach($project as $p){ 
+      <?php foreach($project as $p){
         if (($p['kategori']=="film&video")&&$p['admin_check']=="Accepted") {?>
         <div class="columns is-multiline">
           <div class="column is-6-tablet is-4-desktop is-3-widescreen">
@@ -357,10 +365,10 @@
         </div>
         <?php }} ?>
       </div>
-    </div> 
+    </div>
 
     <div id="Games" class="tabcontent">
-      <?php foreach($project as $p){ 
+      <?php foreach($project as $p){
         if (($p['kategori']=="games")&&$p['admin_check']=="Accepted") {?>
         <div class="columns is-multiline">
           <div class="column is-6-tablet is-4-desktop is-3-widescreen">
@@ -411,10 +419,10 @@
         </div>
         <?php }} ?>
       </div>
-    </div> 
+    </div>
 
     <div id="Publish" class="tabcontent">
-      <?php foreach($project as $p){ 
+      <?php foreach($project as $p){
         if (($p['kategori']=="publishing")&&$p['admin_check']=="Accepted") {?>
         <div class="columns is-multiline">
           <div class="column is-6-tablet is-4-desktop is-3-widescreen">
@@ -465,10 +473,10 @@
         </div>
         <?php }} ?>
       </div>
-    </div> 
+    </div>
 
     <div id="Sosial" class="tabcontent">
-      <?php foreach($project as $p){ 
+      <?php foreach($project as $p){
         if (($p['kategori']=="sosial")&&$p['admin_check']=="Accepted") {?>
         <div class="columns is-multiline">
           <div class="column is-6-tablet is-4-desktop is-3-widescreen">
@@ -519,8 +527,8 @@
         </div>
         <?php }} ?>
       </div>
-    </div> 
-  </div>  
+    </div>
+  </div>
   </div>
 
 <?php $this->load->view('page_footer')?>

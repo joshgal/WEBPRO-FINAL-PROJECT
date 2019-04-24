@@ -137,7 +137,7 @@
                   <option>Publishing</option>
                   <option>Social</option>
                 </select>
-                <a href="" class="btn btn-lg btn-block btn-next text-white" type="submit" style="background: rgb(238, 48, 89);">Next</a>
+                <a href="<?= base_url('C_krowd_initiate/edit')?>" class="btn btn-lg btn-block btn-next text-white" type="submit" style="background: rgb(238, 48, 89);">Next</a>
             </form><!-- /form -->
         </div><!-- /card-container -->
     </div><!-- /container -->
