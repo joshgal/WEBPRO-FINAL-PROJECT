@@ -42,8 +42,8 @@ class Auth extends CI_Controller {
 
         ]);
         $this->form_validation->set_rules('re_password','Re_password','required|trim|min_length[3]|matches[password]');
-        $this->form_validation->set_rules('submit', 'Submit', 'required',[
-            'required' =>'Please accept our terms of service']);
+        // $this->form_validation->set_rules('submit', 'Submit', 'required',[
+            // 'required' =>'Please accept our terms of service']);
         if($this->form_validation->run() != TRUE){
             $this->load->view('page_header');
             $this->load->view('auth/registrasi');

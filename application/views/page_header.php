@@ -16,7 +16,7 @@
 </head>
 <body>
 <style>
-  
+
   </style>
 
 	<?php
@@ -57,6 +57,9 @@
 						<div class="menu_item">
 							 <a class="item_link"><img src="<?= base_url('assets/img/user.jpg');?>"style= "width:48px; border-radius:24px;"></a>
 						</div>
+						<div class="menu_item">
+              <a href="<?= base_url('Auth/logout')?>" class="item_link">Logout</a>
+            </div>
 						<?php
 						} else {
 						?>
@@ -90,6 +93,9 @@
  						<!-- HTML Kalau udah login bakal muncul icon profile-->
 						<div class="menu_item">
 							 <a class="item_link"><img src="<?= base_url('assets/img/user.jpg');?>"style= "width:48px; border-radius:24px;"></a>
+						</div>
+						<div class="menu_item">
+							<a href="<?= base_url('Auth/logout')?>" class="item_link">Logout</a>
 						</div>
 						<?php
 						} else {

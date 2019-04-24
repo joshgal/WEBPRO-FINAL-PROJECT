@@ -21,6 +21,7 @@ class C_profile extends CI_Controller {
 	//function to load profile menu
 	public function index()
 	{
-		$this->load->view('profile');
+		$data['profile'] = $this->db->get_where('user', array('username' => $this->session->userdata('username')))->result();
+		$this->load->view('profile',$data);
 	}
 }
