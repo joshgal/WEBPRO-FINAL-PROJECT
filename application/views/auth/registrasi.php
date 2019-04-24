@@ -100,12 +100,12 @@ form[role=register] {
           <input type="text" name="email"value="<?= set_value('email');?>"  style="width: 100%; margin-bottom: 20px; padding: 10px; transition: all 0.2s ease 0s; border: 1px solid rgb(228, 228, 228); border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 5px;" id="email" placeholder="Email">
 		  <input type="password" name= "password"style="width: 100%; margin-bottom: 20px; padding: 10px; transition: all 0.2s ease 0s; border: 1px solid rgb(228, 228, 228); border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 5px;" id="password" placeholder="Password">
 		  <input type="password" name ="re_password" style="width: 100%; margin-bottom: 20px; padding: 10px; transition: all 0.2s ease 0s; border: 1px solid rgb(228, 228, 228); border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 5px;" id="re_pasword" placeholder="Re-Enter Password">
-			<input type="checkbox" id="terms" value="on">
+			<input type="checkbox"  name="go" id="terms" value="on">
 		  <label for="terms" style="padding-left: 5px;">I agree with Krowd's<a href="/terms" style="text-decoration: none; outline: none; padding-left: 5px;">terms and condition</a></label>   
           <div class="pwstrength_viewport_progress"></div>
           
           
-		  <button type="submit" name="go" class="submit RC-RedButton">sign me up!</button>
+		  <button type="submit"name="submit" class="submit RC-RedButton">sign me up!</button>
 		  <hr>
           <div>
 		  <p>Have an account ?<a href="<?= base_url('auth/login');?>" style="padding-left: 5px;">Login</a></p>
