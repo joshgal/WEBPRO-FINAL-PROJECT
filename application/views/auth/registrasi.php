@@ -104,7 +104,6 @@ form[role=register] {
 		  <label for="terms" style="padding-left: 5px;">I agree with Krowd's<a href="/terms" style="text-decoration: none; outline: none; padding-left: 5px;">terms and condition</a></label>
           <div class="pwstrength_viewport_progress"></div>
 
-
 		  <button type="submit" name="go" class="submit RC-RedButton">sign me up!</button>
 		  <hr>
           <div>
@@ -113,7 +112,7 @@ form[role=register] {
 
         </form>
 
-       
+
       </section>
       </div>
 

@@ -59,15 +59,7 @@
     box-sizing: border-box;
 }
 
-.form-initiate #inputEmail,
-.form-initiate #inputPassword {
-    direction: ltr;
-    height: 44px;
-    font-size: 16px;
-}
 
-.form-initiate input[type=email],
-.form-initiate input[type=password],
 .form-initiate input[type=text],
 .form-initiate button {
     width: 100%;
