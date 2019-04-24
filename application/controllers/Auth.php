@@ -40,9 +40,9 @@ class Auth extends CI_Controller {
             'matches' => 'Password do not match',
 
 
-        ]);
+        ]);     
         $this->form_validation->set_rules('re_password','Re_password','required|trim|min_length[3]|matches[password]');
-        $this->form_validation->set_rules('go', 'Go', 'required',[
+        $this->form_validation->set_rules('submit', 'Submit', 'required',[
             'required' =>'Please accept our terms of service']);
         if($this->form_validation->run() != TRUE){
             $this->load->view('page_header');
