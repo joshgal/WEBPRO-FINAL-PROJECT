@@ -1,7 +1,7 @@
 <style>
 	.progress-bar {
     color: #333;
-} 
+}
 
 
 
@@ -12,9 +12,9 @@
 	outline: none;
 }
 
-   
+
 body {
-	
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -51,7 +51,7 @@ form[role=register] {
 	form[role=register] > div {
 		text-align: center;
 	}
-	
+
 .form-links {
 	text-align: center;
 	margin-top: 1em;
@@ -83,12 +83,12 @@ form[role=register] {
 
 </style>
 <div class="container">
-  
+
   <div class="row" id="pwd-container">
     <div class="col-md-4"></div>
-    
+
     <div class="col-md-4" >
-	
+
       <section class="register-form">
 		<form method="post" action="<?= base_url('auth/registrasi');?>" role="register">
 		<h1 style="margin-top: 0px; margin-bottom: 40px; text-align: center; font-family: heading; font-weight: bold; font-size: 24px;">Register</h1>
@@ -101,28 +101,28 @@ form[role=register] {
 		  <input type="password" name= "password"style="width: 100%; margin-bottom: 20px; padding: 10px; transition: all 0.2s ease 0s; border: 1px solid rgb(228, 228, 228); border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 5px;" id="password" placeholder="Password">
 		  <input type="password" name ="re_password" style="width: 100%; margin-bottom: 20px; padding: 10px; transition: all 0.2s ease 0s; border: 1px solid rgb(228, 228, 228); border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 5px;" id="re_pasword" placeholder="Re-Enter Password">
 			<input type="checkbox" name="submit" id="terms" value="on">
-		  <label for="terms" style="padding-left: 5px;">I agree with Krowd's<a href="/terms" style="text-decoration: none; outline: none; padding-left: 5px;">terms and condition</a></label>   
+		  <label for="terms" style="padding-left: 5px;">I agree with Krowd's<a href="/terms" style="text-decoration: none; outline: none; padding-left: 5px;">terms and condition</a></label>
           <div class="pwstrength_viewport_progress"></div>
-          
-          
+
+
 		  <button type="submit" name="go" class="submit RC-RedButton">sign me up!</button>
 		  <hr>
           <div>
 		  <p>Have an account ?<a href="<?= base_url('auth/login');?>" style="padding-left: 5px;">Login</a></p>
           </div>
-          
+
         </form>
-        
+
        
-      </section>  
+      </section>
       </div>
-      
+
       <div class="col-md-4"></div>
-      
+
 
   </div>
-  
-   
-  
-  
+
+
+
+
 </div>
