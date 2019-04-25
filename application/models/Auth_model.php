@@ -14,7 +14,7 @@ class Auth_model extends CI_Model {
                     'email' => $cek['email']
                 ];
                     $this->session->set_userdata($data);
-                    redirect('user');
+                    redirect('c_krowd_home/index');
             }else{
                 $this->session->set_flashdata('flash','<div class="text-danger" role="alert">Unable to log in with provided credentials.</div>');
             }
