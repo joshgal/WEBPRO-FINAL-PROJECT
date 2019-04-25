@@ -114,8 +114,16 @@
 							<p class="time-left"><?= $p['days_left']?> days left</p>
 						</div>
 					</div>
-					<?php if($p['joined_user'] != $p['max_user']) {?>
-					<button type="submit" class="btnCollaborate">Collaborate</button>
+					<?php if($p['joined_user'] != $p['max_user']) {
+						if ($this->session->userdata('username') == FALSE) { ?>
+							<form action="<?= base_url('auth/login')?>">
+								<button type="submit" class="btnCollaborate">Collaborate</button>
+							</form>
+						<?php } else {?>
+							<form action="<?= base_url('c_krowd_home/about')?>">
+								<button type="submit" class="btnCollaborate">Collaborate</button>
+							</form>
+						<?php }?>
 					<?php }?>
 				</div>
 			</div>

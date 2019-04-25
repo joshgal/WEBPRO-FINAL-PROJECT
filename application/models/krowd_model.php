@@ -7,15 +7,36 @@ class krowd_model extends CI_Model
         parent::__construct();
     }
 
-    function get_all_projects_brief()
+    function get_all_notChProjects_brief()
     {
-    	$this->db->select('project.id_project, project.judul_project, user.username, project.kategori, project.short_desc, DATEDIFF(project.end_date,CURDATE()) AS "days_left", COUNT(queue.id_user) as "joined_user", project.max_user, project.popularity, project.admin_check, project.upload_image');
+    	$this->db->select('project.id_project, project.judul_project, user.username, project.short_desc, DATEDIFF(project.end_date,CURDATE()) AS "days_left", project.admin_check');
     	$this->db->from('project');
     	$this->db->join('user','project.id_user = user.id_user');
-    	$this->db->join('queue', 'queue.id_project = project.id_project');
-    	$this->db->group_by('project.id_project');
+        $this->db->where('project.admin_check = "NotChecked"');
     	$query = $this->db->get();
     	return $query->result_array();
+    }
+
+    function get_all_ChProjects_brief()
+    {
+        $this->db->select('project.id_project, project.judul_project, user.username, project.short_desc, DATEDIFF(project.end_date,CURDATE()) AS "days_left", project.admin_check');
+        $this->db->from('project');
+        $this->db->join('user','project.id_user = user.id_user');
+        $this->db->where('project.admin_check = "Accepted"');
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+    function get_all_projects_brief()
+    {
+        $this->db->select('project.id_project, project.judul_project, user.username, project.kategori, project.short_desc, DATEDIFF(project.end_date,CURDATE()) AS "days_left", COUNT(queue.id_user) as "joined_user", project.max_user, project.popularity, project.admin_check, project.upload_image');
+        $this->db->from('project');
+        $this->db->join('user','project.id_user = user.id_user');
+        $this->db->join('queue', 'queue.id_project = project.id_project');
+        $this->db->group_by('project.id_project');
+        $this->db->where('project.admin_check = "Accepted"');
+        $query = $this->db->get();
+        return $query->result_array();
     }
 
     function get_specified_project_info($id)
@@ -59,5 +80,13 @@ class krowd_model extends CI_Model
         return $query->result_array(); 
           
     }
-
+    function update_project_admin_check($id)
+    {
+        $data = array(
+            'admin_check' => "Accepted"
+            );
+        $this->db->set($data);
+        $this->db->where('id_project', $id);
+        $this->db->update('project');   
+    }
 }

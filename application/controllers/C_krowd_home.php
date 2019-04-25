@@ -37,4 +37,17 @@ class C_krowd_home extends CI_Controller {
 		$data['collab'] = $this->krowd_model->get_project_collaborators($id);
 		$this->load->view('detil_project', $data);
 	}
+
+	public function admin()
+	{
+		$data['project'] = $this->krowd_model->get_all_ChProjects_brief();
+		$data['nproject'] = $this->krowd_model->get_all_notChProjects_brief();
+		$this->load->view('admin_menu', $data);
+	}
+
+	public function update_stat($id)
+	{
+		$this->krowd_model->update_project_admin_check($id);
+		redirect('c_krowd_home/admin');
+	}
 }
