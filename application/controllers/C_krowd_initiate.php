@@ -3,34 +3,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class C_krowd_initiate extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
-	//function to load initiate menu
+	function __construct() {
+	      parent::__construct();
+	      $this->load->model("Project_model");
+	}
+
 	public function index()
 	{
 		$this->load->view('initiate');
 	}
 
-	public function edit()
-	{
-		$this->load->view('edit_initiate');
+	public function createProject(){
+		$id_user = $this->session->userdata('id_user');
+		$judul = $this->input->post('judul_project');
+		$project = $this->Project_model->addProject($id_user);
+
+		redirect('C_krowd_initiate/edit/'.$project->id_project);
 	}
 
-	public function about()
+	public function edit($id_project)
 	{
-		$this->load->view('about');
+		$data['project'] = $this->Project_model->getProjectByID($id_project);
+		$this->load->view('edit_initiate', $data);
+	}
+
+	public function save(){
+		$this->Project_model->update();
+		redirect('C_krowd_initiate/edit/'.$this->input->post('id_project'));
+	}
+
+	public function deleteProject($id_project){
+		if ($this->Project_model->delete($id_project)) {
+         redirect('C_krowd_home');
+    }
+
 	}
 }

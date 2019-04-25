@@ -10,6 +10,7 @@ class Auth_model extends CI_Model {
             //jika username ada
             if(password_verify($password, $cek['password'])){
                 $data = [
+                    'id_user' => $cek['id_user'],
                     'username' => $cek['username'],
                     'email' => $cek['email']
                 ];
@@ -20,7 +21,7 @@ class Auth_model extends CI_Model {
                     else{
                         redirect('c_krowd_home/index');
                     }
-                    
+
             }else{
                 $this->session->set_flashdata('flash','<div class="text-danger" role="alert">Unable to log in with provided credentials.</div>');
             }

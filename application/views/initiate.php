@@ -113,12 +113,12 @@
 <div class="container">
         <div class="card card-container">
             <h1 class="message">Let's get started!</h1>
-            <form class="form-initiate">
+            <form class="form-initiate" action="<?= base_url('C_krowd_initiate/createProject')?>" method="post">
                 <span class="reauth-Project"></span>
                 <label>Project Title</label>
-                <input type="text" name="" id="inputProject" class="form-control" placeholder="Project Title" required autofocus>
+                <input type="text" name="judul_project" id="inputProject" class="form-control" placeholder="Project Title" required autofocus>
                 <label for="formGroupExampleInput" class="col-form-label">Choose the category of this project</label>
-                <select class="form-control selectpicker" placeholder="Select Category" style="margin-bottom: 16px;">
+                <select name="kategori" class="form-control selectpicker" placeholder="Select Category" style="margin-bottom: 16px;">
                   <option hidden>Select Category</option>
                   <option>Music</option>
                   <option>Fashion</option>
@@ -129,7 +129,7 @@
                   <option>Publishing</option>
                   <option>Social</option>
                 </select>
-                <a href="<?= base_url('C_krowd_initiate/edit')?>" class="btn btn-lg btn-block btn-next text-white" type="submit" style="background: rgb(238, 48, 89);">Next</a>
+                <button class="btn btn-lg btn-block btn-next text-white" type="submit" style="background: rgb(238, 48, 89);">Next</button>
             </form><!-- /form -->
         </div><!-- /card-container -->
     </div><!-- /container -->

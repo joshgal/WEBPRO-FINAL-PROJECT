@@ -11,7 +11,8 @@
 	<script src="<?= base_url('assets/js/bootstrap.min.js')?>"></script>
   <script src="<?= base_url('assets/js/jquery.min.js')?>"></script>
   <script src="<?= base_url('assets/js/header.js')?>"></script>
-  <!-- Favicon -->
+  <script src="<?= base_url('assets/js/tabs.js')?>"></script>
+	  <!-- Favicon -->
   <link rel="icon" href="<?= base_url('assets/img/favicon.png')?>" sizes="16x16" type="image/png">
 </head>
 <body>
