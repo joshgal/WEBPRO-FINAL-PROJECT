@@ -14,7 +14,13 @@ class Auth_model extends CI_Model {
                     'email' => $cek['email']
                 ];
                     $this->session->set_userdata($data);
-                    redirect('user');
+                    if ($cek['username']=='admin') {
+                        redirect('c_krowd_home/admin');
+                    }
+                    else{
+                        redirect('c_krowd_home/index');
+                    }
+                    
             }else{
                 $this->session->set_flashdata('flash','<div class="text-danger" role="alert">Unable to log in with provided credentials.</div>');
             }
@@ -33,33 +39,4 @@ class Auth_model extends CI_Model {
 
     return $this->db->insert('user', $data);
 }
-public function update($data, $id)
-    {
-        $this->db->where('id_user', $id);
-        $this->db->update('user', $data);
-        return $this->db->affected_rows();
-    }
-public function deleteAccount()
-	{
-	
-		$this->db->where('id_user');
-		return $this->db->delete('user');
-
-    }
-    
-    public function ubahprofil($id)
-	{
-		$data = [
-			"username" => $this->input->post('nama', true),
-			"kota" => $this->input->post('kota', true),
-            "short_bio" => $this->input->post('bio', true),
-            "experience" => $this->input->post('experience', true),
-            "portfolio" => $this->input->post('portfolio', true),
-            
-		];
-		
-		
-		$this->db->where('id_user',$id);
-		return $this->db->update('user', $data);
-	}
 }

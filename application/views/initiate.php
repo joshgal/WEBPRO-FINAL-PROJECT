@@ -59,15 +59,7 @@
     box-sizing: border-box;
 }
 
-.form-initiate #inputEmail,
-.form-initiate #inputPassword {
-    direction: ltr;
-    height: 44px;
-    font-size: 16px;
-}
 
-.form-initiate input[type=email],
-.form-initiate input[type=password],
 .form-initiate input[type=text],
 .form-initiate button {
     width: 100%;
@@ -137,7 +129,7 @@
                   <option>Publishing</option>
                   <option>Social</option>
                 </select>
-                <a href="" class="btn btn-lg btn-block btn-next text-white" type="submit" style="background: rgb(238, 48, 89);">Next</a>
+                <a href="<?= base_url('C_krowd_initiate/edit')?>" class="btn btn-lg btn-block btn-next text-white" type="submit" style="background: rgb(238, 48, 89);">Next</a>
             </form><!-- /form -->
         </div><!-- /card-container -->
     </div><!-- /container -->
