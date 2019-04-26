@@ -33,33 +33,4 @@ class Auth_model extends CI_Model {
 
     return $this->db->insert('user', $data);
 }
-public function update($data, $id)
-    {
-        $this->db->where('id_user', $id);
-        $this->db->update('user', $data);
-        return $this->db->affected_rows();
-    }
-public function deleteAccount()
-	{
-	
-		$this->db->where('id_user');
-		return $this->db->delete('user');
-
-    }
-    
-    public function ubahprofil($id)
-	{
-		$data = [
-			"username" => $this->input->post('nama', true),
-			"kota" => $this->input->post('kota', true),
-            "short_bio" => $this->input->post('bio', true),
-            "experience" => $this->input->post('experience', true),
-            "portfolio" => $this->input->post('portfolio', true),
-            
-		];
-		
-		
-		$this->db->where('id_user',$id);
-		return $this->db->update('user', $data);
-	}
 }
