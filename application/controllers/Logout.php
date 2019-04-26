@@ -18,7 +18,7 @@ class C_profile extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	//function to load profile menu
+	//function to load home menu
 	public function index()
 	{
 		$this->load->view('profile');
